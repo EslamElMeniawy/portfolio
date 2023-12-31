@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "346272910281",
+    "firebase_url": "https://portfolio-e48b7.firebaseio.com",
+    "project_id": "portfolio-e48b7",
+    "storage_bucket": "portfolio-e48b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346272910281:android:d461966a608c7a751a7618",
+        "android_client_info": {
+          "package_name": "elmeniawy.eslam.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346272910281-iecr2p002ph3ls87bvv0f0mnhvspuuok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJxxB34EHwB_5FGpSyB2UeOxylV6ODERQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346272910281-iecr2p002ph3ls87bvv0f0mnhvspuuok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
