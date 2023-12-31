@@ -95,10 +95,10 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.portfolio"
+    namespace "elmeniawy.eslam.portfolio"
 
     defaultConfig {
-        applicationId "com.portfolio"
+        applicationId "elmeniawy.eslam.portfolio"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -109,7 +109,7 @@ android {
 
         // Added for "react-native-config" to support the use of "applicationIdSuffix"
         // or different "applicationId" than the package name.
-        resValue "string", "build_config_package", "com.portfolio"
+        resValue "string", "build_config_package", "elmeniawy.eslam.portfolio"
     }
 
     signingConfigs {

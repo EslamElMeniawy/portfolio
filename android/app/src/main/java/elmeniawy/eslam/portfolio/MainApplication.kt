@@ -1,4 +1,4 @@
-package com.portfolio
+package elmeniawy.eslam.portfolio
 
 import androidx.multidex.MultiDexApplication
 import com.facebook.react.PackageList

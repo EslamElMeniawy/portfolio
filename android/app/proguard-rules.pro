@@ -26,5 +26,5 @@
 }
 
 # Proguard rules for "react-native-config".
--keep class com.portfolio.BuildConfig { *; }
+-keep class elmeniawy.eslam.portfolio.BuildConfig { *; }
 -keepresources string/build_config_package
