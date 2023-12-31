@@ -601,7 +601,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = portfolio/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = portfolio;
+				INFOPLIST_KEY_CFBundleDisplayName = Portfolio | Eslam El Meniawy;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -634,7 +634,7 @@
 				CODE_SIGN_ENTITLEMENTS = portfolio/portfolio.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = portfolio/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = portfolio;
+				INFOPLIST_KEY_CFBundleDisplayName = Portfolio | Eslam El Meniawy;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
