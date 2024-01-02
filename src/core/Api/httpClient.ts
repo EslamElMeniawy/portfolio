@@ -1,15 +1,8 @@
 import axios from 'axios';
 import {default as Config} from 'react-native-config';
-import type {ServerError, ServerErrorResponse} from '@src/core';
 import {translate, getCurrentLocale} from '@src/core/I18n';
-import {setErrorDialogMessage, store} from '@src/store';
 import ConsoleColors from './ConsoleColors';
-import skip401Urls from './skip401Urls';
-import type {
-  AxiosError,
-  AxiosResponse,
-  InternalAxiosRequestConfig,
-} from 'axios';
+import type {AxiosResponse, InternalAxiosRequestConfig} from 'axios';
 
 const getLogMessage = (message: string) => `## HttpClient:: ${message}`;
 
@@ -18,11 +11,6 @@ const addHeaders = (config: InternalAxiosRequestConfig<any>) => {
   config.headers['Content-Type'] = 'application/json';
   config.headers['Accept-Language'] = getCurrentLocale();
   config.headers['cache-control'] = 'no-cache';
-  const token = store.getState().user?.user?.apiToken;
-
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
 };
 
 const getLogMethodColor = (method?: string) => {
@@ -62,72 +50,6 @@ const getLogMethodColor = (method?: string) => {
   }
 
   return methodColor;
-};
-
-const shouldSkip401 = (error: AxiosError<ServerErrorResponse>) => {
-  console.info(getLogMessage('shouldSkip401'), error);
-  const responseUrl = error.request?.responseURL;
-  console.info(getLogMessage('responseUrl'), responseUrl);
-
-  const isSkip401Url: boolean =
-    responseUrl &&
-    typeof responseUrl === 'string' &&
-    skip401Urls.some(url => responseUrl.indexOf(url) > -1);
-
-  console.info(getLogMessage('isSkip401Url'), isSkip401Url);
-  return isSkip401Url;
-};
-
-const handle401Error = (error: AxiosError<ServerErrorResponse>) => {
-  console.info(getLogMessage('handle401Error'), error);
-  const status = error.response?.status;
-  console.info(getLogMessage('status'), status);
-
-  if (status === 401 && !shouldSkip401(error)) {
-    store.dispatch(setErrorDialogMessage(translate('session_expired')));
-  }
-};
-
-const getErrorMessage = (error: AxiosError<ServerErrorResponse>) => {
-  // TODO: Construct error message base on "ServerErrorResponse" constructed from API.
-  let errorMessage: string = translate('unknown_error');
-
-  if (error.response?.data?.error) {
-    errorMessage = error.response?.data?.error;
-  } else if (
-    error.response?.data?.errors &&
-    typeof error.response.data.errors === 'string'
-  ) {
-    errorMessage = error.response?.data?.errors;
-  } else if (
-    error.response?.data?.errors &&
-    typeof error.response.data.errors === 'object' &&
-    error.response.data.errors.message &&
-    error.response.data.errors.message.length
-  ) {
-    errorMessage = error.response?.data?.errors?.message?.join('\n');
-  } else if (error.response?.data?.message) {
-    errorMessage = error.response?.data?.message;
-  } else if (error.message) {
-    errorMessage = error.message;
-  }
-
-  return errorMessage;
-};
-
-const handleAxiosError = (error: AxiosError<ServerErrorResponse>) => {
-  console.info(getLogMessage('handleAxiosError'), error);
-  handle401Error(error);
-
-  const severError: ServerError = {
-    ...error,
-    date: new Date(),
-    status: error.response?.status,
-    data: error.response?.data,
-    errorMessage: getErrorMessage(error),
-  };
-
-  return Promise.reject(severError);
 };
 
 const requestFulfilledInterceptor = (
@@ -177,16 +99,7 @@ const responseRejectedInterceptor = (error: any) => {
     error,
   );
 
-  if (axios.isAxiosError<ServerErrorResponse>(error)) {
-    return handleAxiosError(error);
-  }
-
-  const severError: ServerError = {
-    ...error,
-    errorMessage: translate('unknown_error'),
-  };
-
-  return Promise.reject(severError);
+  return Promise.reject(error);
 };
 
 const httpClient = axios.create({

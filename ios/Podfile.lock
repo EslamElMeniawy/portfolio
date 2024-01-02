@@ -17,9 +17,6 @@ PODS:
   - Firebase/Crashlytics (10.19.0):
     - Firebase/CoreOnly
     - FirebaseCrashlytics (~> 10.19.0)
-  - Firebase/Messaging (10.19.0):
-    - Firebase/CoreOnly
-    - FirebaseMessaging (~> 10.19.0)
   - FirebaseAnalytics/WithoutAdIdSupport (10.19.0):
     - FirebaseCore (~> 10.0)
     - FirebaseInstallations (~> 10.0)
@@ -50,15 +47,6 @@ PODS:
     - GoogleUtilities/Environment (~> 7.8)
     - GoogleUtilities/UserDefaults (~> 7.8)
     - PromisesObjC (~> 2.1)
-  - FirebaseMessaging (10.19.0):
-    - FirebaseCore (~> 10.0)
-    - FirebaseInstallations (~> 10.0)
-    - GoogleDataTransport (~> 9.3)
-    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
-    - GoogleUtilities/Environment (~> 7.8)
-    - GoogleUtilities/Reachability (~> 7.8)
-    - GoogleUtilities/UserDefaults (~> 7.8)
-    - nanopb (< 2.30910.0, >= 2.30908.0)
   - FirebaseSessions (10.19.0):
     - FirebaseCore (~> 10.5)
     - FirebaseCoreExtension (~> 10.0)
@@ -1182,8 +1170,6 @@ PODS:
     - React-Core
   - RNCMaskedView (0.3.1):
     - React-Core
-  - RNCPushNotificationIOS (1.11.0):
-    - React-Core
   - RNDeviceInfo (10.12.0):
     - React-Core
   - RNFastImage (8.6.3):
@@ -1199,11 +1185,6 @@ PODS:
     - React-Core
   - RNFBCrashlytics (18.7.3):
     - Firebase/Crashlytics (= 10.19.0)
-    - FirebaseCoreExtension (= 10.19.0)
-    - React-Core
-    - RNFBApp
-  - RNFBMessaging (18.7.3):
-    - Firebase/Messaging (= 10.19.0)
     - FirebaseCoreExtension (= 10.19.0)
     - React-Core
     - RNFBApp
@@ -1287,13 +1268,11 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
-  - "RNCPushNotificationIOS (from `../node_modules/@react-native-community/push-notification-ios`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNFastImage (from `../node_modules/react-native-fast-image`)
   - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
   - "RNFBCrashlytics (from `../node_modules/@react-native-firebase/crashlytics`)"
-  - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNLocalize (from `../node_modules/react-native-localize`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -1309,7 +1288,6 @@ SPEC REPOS:
     - FirebaseCoreInternal
     - FirebaseCrashlytics
     - FirebaseInstallations
-    - FirebaseMessaging
     - FirebaseSessions
     - fmt
     - GoogleAppMeasurement
@@ -1438,8 +1416,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-bootsplash"
   RNCMaskedView:
     :path: "../node_modules/@react-native-masked-view/masked-view"
-  RNCPushNotificationIOS:
-    :path: "../node_modules/@react-native-community/push-notification-ios"
   RNDeviceInfo:
     :path: "../node_modules/react-native-device-info"
   RNFastImage:
@@ -1450,8 +1426,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-firebase/app"
   RNFBCrashlytics:
     :path: "../node_modules/@react-native-firebase/crashlytics"
-  RNFBMessaging:
-    :path: "../node_modules/@react-native-firebase/messaging"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNLocalize:
@@ -1475,7 +1449,6 @@ SPEC CHECKSUMS:
   FirebaseCoreInternal: b444828ea7cfd594fca83046b95db98a2be4f290
   FirebaseCrashlytics: a4d2ad12f5c07ec8ee0ebc89133a45498a293ba6
   FirebaseInstallations: 033d199474164db20c8350736842a94fe717b960
-  FirebaseMessaging: d322bd030a0e97398bf134746e087b88e6ba0074
   FirebaseSessions: e5f4caa188dc8bc6142abc974355be75b042215e
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
@@ -1539,13 +1512,11 @@ SPEC CHECKSUMS:
   ReactCommon: 73242ec9768e71688f35ad97ae3d0709a0f66435
   RNBootSplash: f7fd5a7d4f1c13be3d0f5f31d27af7bcc1b1acef
   RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
-  RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
   RNDeviceInfo: db5c64a060e66e5db3102d041ebe3ef307a85120
   RNFastImage: 5c9c9fed9c076e521b3f509fe79e790418a544e8
   RNFBAnalytics: c4157d4e8d8a0e29e7fc61d9954685a1efcecb42
   RNFBApp: 5ee688b07ed0fa692a3a8fd07df6d6ae41e4c3a0
   RNFBCrashlytics: 11f52604cc41fde69e8cc8fcc9c578fc8d5b8a15
-  RNFBMessaging: c839473d12cbe1b042b29898177033de4214e932
   RNGestureHandler: a426f2b9134a10ac56ff78593fb068541e68f0e7
   RNLocalize: 1ce4263770515f53d3de442ce7657b3661b16a37
   RNScreens: 2b73f5eb2ac5d94fbd61fa4be0bfebd345716825

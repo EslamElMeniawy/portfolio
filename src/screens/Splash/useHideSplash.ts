@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Animated, Dimensions} from 'react-native';
 import {hide as rnBootSplashHide} from 'react-native-bootsplash';
-import {useAppSelector} from '@src/store';
 import type {UseHideSplashProps} from './useHideSplash.types';
 
 export const useHideSplash = (props: UseHideSplashProps) => {
@@ -11,12 +10,7 @@ export const useHideSplash = (props: UseHideSplashProps) => {
   // #endregion
 
   // #region Variables
-  const {opacity, translateY, navigation, isLanguageLoaded, isUserLoaded} =
-    props;
-  // #endregion
-
-  // #region Redux
-  const {user: stateUser} = useAppSelector(state => state.user);
+  const {opacity, translateY, navigation, isLanguageLoaded} = props;
   // #endregion
 
   // #region State
@@ -26,8 +20,8 @@ export const useHideSplash = (props: UseHideSplashProps) => {
 
   const openNextScreen = React.useCallback(() => {
     console.info(getLogMessage('openNextScreen'));
-    navigation.replace(stateUser ? 'home' : 'login');
-  }, [navigation, stateUser]);
+    navigation.replace('home');
+  }, [navigation]);
 
   const hideSplash = React.useCallback(async () => {
     console.info(getLogMessage('hideSplash'));
@@ -73,10 +67,10 @@ export const useHideSplash = (props: UseHideSplashProps) => {
     //   - Open home screen.
     // - Else:
     //   - Open login screen.
-    if (isLanguageLoaded && isUserLoaded) {
+    if (isLanguageLoaded) {
       hideSplash();
     }
-  }, [isLanguageLoaded, isUserLoaded, hideSplash]);
+  }, [isLanguageLoaded, hideSplash]);
   // #endregion
 
   return isBootSplashVisible;

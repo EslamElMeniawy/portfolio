@@ -1,7 +1,5 @@
-import type {ServerError} from '@src/core';
-
 export interface Props {
-  error?: ServerError | null;
+  error?: any | null;
   isLoadingError?: boolean;
   data: string;
 }

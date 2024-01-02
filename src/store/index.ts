@@ -3,11 +3,9 @@ import {default as Config} from 'react-native-config';
 import {default as logger} from 'redux-logger';
 import dialogsReducer from './dialogs';
 import networkStateReducer from './networkState';
-import userReducer from './user';
 
 export const store = configureStore({
   reducer: {
-    user: userReducer,
     dialogs: dialogsReducer,
     networkState: networkStateReducer,
   },
@@ -29,4 +27,3 @@ export * from './hooks';
 // Reducers exports.
 export * from './dialogs';
 export * from './networkState';
-export * from './user';

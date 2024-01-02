@@ -1,3 +1,1 @@
-export * from './auth';
-export * from './notifications';
-export * from './user';
+export * from './projects';

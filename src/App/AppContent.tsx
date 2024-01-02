@@ -9,12 +9,9 @@ import {ToastProvider} from 'react-native-toast-notifications';
 import {ErrorDialog, Toast} from '@src/components';
 import {NavigationContainer} from '@src/navigation';
 import {paperTheme, queryClient} from '@src/utils';
-import {useFirebaseMessagingInitialization} from './useFirebaseMessagingInitialization';
-import {useForegroundMessagesListener} from './useForegroundMessagesListener';
 import {useLocalizationInitialization} from './useLocalizationInitialization';
 import {useLogInitialization} from './useLogInitialization';
 import {useNetworkListener} from './useNetworkListener';
-import {useNotificationsInteraction} from './useNotificationsInteraction';
 import {useReactQueryFocusManager} from './useReactQueryFocusManager';
 import {useReactQueryOnlineManager} from './useReactQueryOnlineManager';
 
@@ -24,9 +21,6 @@ export default React.memo(() => {
   useNetworkListener();
   useReactQueryFocusManager();
   useReactQueryOnlineManager();
-  useFirebaseMessagingInitialization();
-  useForegroundMessagesListener();
-  useNotificationsInteraction();
 
   // #region UI
   return languageLoaded ? (

@@ -12,5 +12,4 @@ export interface UseHideSplashProps {
     'RootStack'
   >;
   isLanguageLoaded: boolean;
-  isUserLoaded: boolean;
 }

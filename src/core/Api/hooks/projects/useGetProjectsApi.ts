@@ -1,24 +1,19 @@
 import {useInfiniteQuery} from '@tanstack/react-query';
-import {default as Config} from 'react-native-config';
-import {fakerNotifications, queryNotifications} from '@src/core';
-import type {
-  PagingResponse,
-  Notification,
-  ServerError,
-  ApiRequest,
-} from '@src/core';
+
+import {queryProjects} from '@src/core';
+import type {PagingResponse, Project, ApiRequest} from '@src/core';
 import type {
   InfiniteData,
   UseInfiniteQueryOptions,
   QueryKey,
 } from '@tanstack/react-query';
 
-const useGetNotificationsApi = (
+const useGetProjectsApi = (
   options?: Omit<
     UseInfiniteQueryOptions<
-      PagingResponse<Notification>,
-      ServerError,
-      InfiniteData<PagingResponse<Notification>, ApiRequest>,
+      PagingResponse<Project>,
+      any,
+      InfiniteData<PagingResponse<Project>, ApiRequest>,
       any,
       QueryKey,
       ApiRequest
@@ -27,17 +22,14 @@ const useGetNotificationsApi = (
   >,
 ) =>
   useInfiniteQuery<
-    PagingResponse<Notification>,
-    ServerError,
-    InfiniteData<PagingResponse<Notification>, ApiRequest>,
+    PagingResponse<Project>,
+    any,
+    InfiniteData<PagingResponse<Project>, ApiRequest>,
     QueryKey,
     ApiRequest
   >({
-    queryFn: ({pageParam}) =>
-      Config.USE_FAKE_API === 'true'
-        ? fakerNotifications.getNotifications(pageParam)
-        : queryNotifications.getNotifications(pageParam),
-    queryKey: ['notifications'],
+    queryFn: ({pageParam}) => queryProjects.getProjects(pageParam),
+    queryKey: ['projects'],
     initialPageParam: {
       // TODO: Change `params` object to match API.
       params: {page: 1, size: 10},
@@ -55,4 +47,4 @@ const useGetNotificationsApi = (
     ...(options ?? {}),
   });
 
-export default useGetNotificationsApi;
+export default useGetProjectsApi;
