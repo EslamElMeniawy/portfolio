@@ -3,10 +3,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- Added for "react-native-push-notification". -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
     <application
         android:name=".MainApplication"
         android:allowBackup="false"
@@ -18,28 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/BootTheme"
         tools:ignore="UnusedAttribute">
-        <!-- Meta for "notifications" -->
-        <!-- TODO: Add notifications icon first -->
-        <!-- <meta-data
-          android:name="com.google.firebase.messaging.default_notification_icon"
-          android:resource="@drawable/ic_notification"
-          tools:replace="android:resource" /> -->
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/notification"
-            tools:replace="android:resource" />
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_channel_id"
-            android:value="${applicationId}.default_notification_channel"
-            tools:replace="android:value" />
-        <!-- Change the value to true to enable pop-up for in foreground on receiving remote notifications (for prevent duplicating while showing local notifications set this to false) -->
-        <meta-data
-            android:name="com.dieam.reactnativepushnotification.notification_foreground"
-            android:value="false" />
-        <meta-data
-            android:name="com.dieam.reactnativepushnotification.notification_color"
-            android:resource="@color/notification" />
-
         <activity
             android:name=".MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
