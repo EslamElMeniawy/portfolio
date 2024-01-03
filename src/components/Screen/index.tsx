@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {View} from 'react-native';
+import {useTheme} from 'react-native-paper';
 import {
   SafeAreaProvider,
   useSafeAreaInsets,
@@ -11,10 +12,11 @@ import type {Props} from './types';
 
 export default React.memo((props: Props) => {
   const insets = useSafeAreaInsets();
-
+  const theme = useTheme();
   const {edges, children, style} = props;
 
   const contentStyle = {
+    backgroundColor: theme.colors.background,
     paddingRight:
       !edges || (edges && edges.includes('right')) ? insets.right : 0,
     paddingLeft: !edges || (edges && edges.includes('left')) ? insets.left : 0,
