@@ -22,19 +22,19 @@ export default React.memo(() => {
         <Text
           type="bold"
           size={18}
-          style={[
+          style={StyleSheet.flatten([
             {color: theme.colors.onBackground},
             styles.text,
             styles.title,
-          ]}>
+          ])}>
           {translate('error_fallback_title')}
         </Text>
         <Text
-          style={[
+          style={StyleSheet.flatten([
             {color: theme.colors.onBackground},
             styles.text,
             styles.message,
-          ]}>
+          ])}>
           {translate('error_fallback_message')}
         </Text>
         <Button

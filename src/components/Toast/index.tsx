@@ -1,13 +1,13 @@
 import {Text} from '@eslam-elmeniawy/react-native-common-components';
 import * as React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {useTheme} from 'react-native-paper';
 import tinycolor from 'tinycolor2';
+import {useAppTheme} from '@src/utils';
 import styles from './styles';
 import type {ToastProps} from 'react-native-toast-notifications/lib/typescript/toast';
 
 export default React.memo((toastOptions: ToastProps) => {
-  const theme = useTheme();
+  const theme = useAppTheme();
 
   const indicatorColor = tinycolor(
     toastOptions.type === 'danger' ? theme.colors.error : theme.colors.primary,

@@ -1,15 +1,14 @@
 import * as React from 'react';
 import {View} from 'react-native';
 import {NavigationBar} from 'react-native-bars';
-import {useTheme} from 'react-native-paper';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import tinyColor from 'tinycolor2';
-
+import {useAppTheme} from '@src/utils';
 import type {Props} from './types';
 
 export default React.memo((props: Props) => {
   const insets = useSafeAreaInsets();
-  const theme = useTheme();
+  const theme = useAppTheme();
   const {edges, navigationBarProps, navigationBarColor} = props;
 
   const {barStyle: navigationBarStyle, ...restNavigationBarProps} =
