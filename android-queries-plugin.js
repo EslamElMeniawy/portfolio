@@ -13,6 +13,13 @@ const withAndroidQueries = (config) => {
             action: [{ $: { "android:name": "android.intent.action.DIAL" } }],
             data: [{ $: { "android:scheme": "tel" } }],
           },
+          {
+            action: [{ $: { "android:name": "android.intent.action.VIEW" } }],
+            category: [
+              { $: { "android:name": "android.intent.category.BROWSABLE" } },
+            ],
+            data: [{ $: { "android:scheme": "https" } }],
+          },
         ],
       },
     ];
