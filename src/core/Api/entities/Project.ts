@@ -1,7 +1,7 @@
 interface Project {
   id?: number;
   name?: string;
-  icon?: string;
+  image?: string;
   details?: string[];
   programmingLang?: string;
   androidLink?: string;

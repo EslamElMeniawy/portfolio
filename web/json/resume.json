@@ -1,0 +1,114 @@
+{
+  "name": "Eslam ElMeniawy",
+  "profession": "Mobile Team Lead",
+  "workExperience": [
+    {
+      "job": "Mobile Team Lead",
+      "company": "Ejada",
+      "date": "Aug 2023 - Present",
+      "details": [
+        "Worked closely with product management to understand customer needs and requirements.",
+        "Participated in the full software development life cycle, including requirements gathering, design, development, testing, and deployment.",
+        "Provided technical leadership and mentorship to junior software engineers.",
+        "Resolved conflicts and provided constructive feedback to team members.",
+        "Participated in code and design reviews to ensure adherence to best practices and standards.",
+        "Collaborated with cross functional teams including product management, design, and QA.",
+        "Worked in a fast paced, high pressure environment, delivering high quality software on time.",
+        "Managed project timelines, deliverables, and resources using project management tools.",
+        "Participated in code reviews and ensured adherence to best practices and standards.",
+        "Participated in technical presentations and demonstrations to clients and stakeholders."
+      ]
+    },
+    {
+      "job": "Sr. Mobile Software Engineer and Team Lead",
+      "company": "RoQay",
+      "date": "Sep 2018 - Jul 2023",
+      "details": [
+        "Leaded and guided the mobile team through the mobile applications development process.",
+        "Created and monitored templates and reusable components for the team to ease and decrease the time of the mobile applications development process.",
+        "Helped the business and design teams to provide specific features of the mobile applications.",
+        "Distributed applications to both GooglePlay and AppStore as well as managing the developers accounts.",
+        "Developed ReactNative, native Android and native iOS mobile applications using JavaScript, TypeScript, Java, Kotlin and Swift.",
+        "Responsible for the training process for interns.",
+        "Demonstrated ability to troubleshoot and debug software issues.",
+        "Continuously learned and adapted to new technologies and industry developments.",
+        "Continuously monitored and improved the performance and stability of the systems.",
+        "Provided mentorship and guidance to junior software engineers.",
+        "Demonstrated strong leadership and teamwork skills.",
+        "Worked closely with product management to understand customer needs and requirements.",
+        "Participated in the full software development life cycle, including requirements gathering, design, development, testing, and deployment."
+      ]
+    },
+    {
+      "job": "Sr. Mobile Software Engineer",
+      "company": "MicroDoers",
+      "date": "Mar 2016 - Sep 2018",
+      "details": [
+        "Developed native Android and iOS mobile applications using Java and Swift.",
+        "Helped the team in providing features to be added to existing projects.",
+        "Write automation tests for mobile applications using Appium.",
+        "Demonstrated ability to troubleshoot and debug software issues.",
+        "Continuously learned and adapted to new technologies and industry developments.",
+        "Implemented continuous integration and deployment processes to improve software delivery efficiency."
+      ]
+    },
+    {
+      "job": "Mobile Software Engineer",
+      "company": "CITC",
+      "date": "Nov 2015 - Sep 2018",
+      "details": [
+        "Developed native Android and iOS mobile applications using Java and Swift as well as cross platform mobile applications using Cordova.",
+        "Distributed applications to both GooglePlay and AppStore as well as managing the developers accounts.",
+        "Continuously learned and adapted to new technologies and industry developments.",
+        "Participated in technical presentations and demonstrations to clients and stakeholders.",
+        "Continuously monitored and improved the performance and stability of the systems.",
+        "Developed and presented software demonstrations to clients and stakeholders."
+      ]
+    },
+    {
+      "job": "Mobile Software Engineer",
+      "company": "MT",
+      "date": "May 2014 - Oct 2015",
+      "details": [
+        "Developed and published cross platform mobile applications using Cordova.",
+        "Continuously learned and adapted to new technologies and industry developments."
+      ]
+    },
+    {
+      "job": "Android Application Developer",
+      "company": "EGIT",
+      "date": "Oct 2013 - Apr 2014",
+      "details": ["Developed native Android applications using Java."]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc. Software Engineering",
+      "place": "Mansoura University, Egypt",
+      "date": "2008 - 2013"
+    }
+  ],
+  "skills": [
+    "Android Development",
+    "Kotlin",
+    "Java",
+    "ReactNative Development",
+    "JavaScript",
+    "TypeScript",
+    "Redux",
+    "iOS Development",
+    "Swift",
+    "Leadership",
+    "Git",
+    "Teamwork",
+    "Creativity",
+    "Automation Testing",
+    "Scrum",
+    "Azure",
+    "Continuous Integration"
+  ],
+  "languages": [
+    { "name": "Arabic", "experience": "Native / Bilingual Proficiency" },
+    { "name": "English", "experience": "Professional Working Proficiency" }
+  ]
+}
