@@ -1,1 +1,1 @@
-export {default as queryProjects} from './queryProjects';
+export { default as queryProjects } from "./queryProjects";

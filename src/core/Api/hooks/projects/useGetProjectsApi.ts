@@ -1,12 +1,11 @@
-import {useInfiniteQuery} from '@tanstack/react-query';
-
-import {queryProjects} from '@src/core';
-import type {PagingResponse, Project, ApiRequest} from '@src/core';
+import { queryProjects } from "@src/core";
+import type { PagingResponse, Project, ApiRequest } from "@src/core";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import type {
   InfiniteData,
   UseInfiniteQueryOptions,
   QueryKey,
-} from '@tanstack/react-query';
+} from "@tanstack/react-query";
 
 const useGetProjectsApi = (
   options?: Omit<
@@ -18,7 +17,7 @@ const useGetProjectsApi = (
       QueryKey,
       ApiRequest
     >,
-    'queryFn' | 'queryKey' | 'initialPageParam' | 'getNextPageParam'
+    "queryFn" | "queryKey" | "initialPageParam" | "getNextPageParam"
   >,
 ) =>
   useInfiniteQuery<
@@ -28,17 +27,15 @@ const useGetProjectsApi = (
     QueryKey,
     ApiRequest
   >({
-    queryFn: ({pageParam}) => queryProjects.getProjects(pageParam),
-    queryKey: ['projects'],
+    queryFn: ({ pageParam }) => queryProjects.getProjects(pageParam),
+    queryKey: ["projects"],
     initialPageParam: {
-      // TODO: Change `params` object to match API.
-      params: {page: 1, size: 10},
+      params: { page: 1, size: 10 },
     },
     getNextPageParam: (lastPage, _allPages, lastPageParam) =>
       lastPage.currentPage === lastPage.lastPage
         ? undefined
         : {
-            // TODO: Change `params` object to match API.
             params: {
               page: (lastPage.currentPage ?? 1) + 1,
               size: lastPageParam.params?.size,

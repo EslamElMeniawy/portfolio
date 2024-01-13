@@ -1,6 +1,6 @@
-import {MD3LightTheme} from 'react-native-paper';
-import {AppColors} from '@src/enums';
-import type {MD3Colors} from 'react-native-paper/lib/typescript/types';
+import { AppColors } from "@src/enums";
+import { MD3LightTheme } from "react-native-paper";
+import type { MD3Colors } from "react-native-paper/lib/typescript/types";
 
 const useAppThemeColorsLight = () =>
   ({

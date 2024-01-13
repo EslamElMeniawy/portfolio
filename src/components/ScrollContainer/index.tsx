@@ -1,12 +1,11 @@
-import {ScrollView} from '@eslam-elmeniawy/react-native-common-components';
-import * as React from 'react';
-import {StyleSheet, useWindowDimensions} from 'react-native';
-import {percentWidth} from '@src/utils';
-import type {ScrollViewProps} from '@eslam-elmeniawy/react-native-common-components';
+import { percentWidth } from "@src/utils";
+import * as React from "react";
+import { StyleSheet, useWindowDimensions, ScrollView } from "react-native";
+import type { ScrollViewProps } from "react-native";
 
 export default React.memo((props: ScrollViewProps) => {
-  const {bounces, contentContainerStyle, children, ...restProps} = props;
-  const {width} = useWindowDimensions();
+  const { bounces, contentContainerStyle, children, ...restProps } = props;
+  const { width } = useWindowDimensions();
 
   return (
     <ScrollView
@@ -18,7 +17,8 @@ export default React.memo((props: ScrollViewProps) => {
         },
         contentContainerStyle,
       )}
-      {...restProps}>
+      {...restProps}
+    >
       {children}
     </ScrollView>
   );

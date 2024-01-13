@@ -1,1 +1,1 @@
-export {default as useGetProjectsApi} from './useGetProjectsApi';
+export { default as useGetProjectsApi } from "./useGetProjectsApi";

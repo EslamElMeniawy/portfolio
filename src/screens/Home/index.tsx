@@ -1,14 +1,4 @@
-import * as React from 'react';
-import {Screen, ScrollContainer} from '@src/components';
-import Header from './Header';
-import styles from './styles';
-
-export default React.memo(() => (
-  <Screen>
-    <Header />
-    <ScrollContainer
-      style={styles.scrollView}
-      contentContainerStyle={styles.scrollViewContent}
-    />
-  </Screen>
-));
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Portfolio } from "./Portfolio";
+export { default as Resume } from "./Resume";

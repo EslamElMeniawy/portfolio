@@ -1,7 +1,9 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json",
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "module": "esnext",
+    "strict": true,
+    "module": "ESNext",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
     "baseUrl": ".",
     "paths": {
       "@src/*": ["./src/*"],
@@ -9,5 +11,5 @@
       "@appJson": ["./app.json"]
     }
   },
-  "include": ["./index.js", "src", "@types", "__tests__"]
+  "include": ["**/*.ts", "**/*.tsx"]
 }

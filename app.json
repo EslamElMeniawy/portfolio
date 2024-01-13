@@ -1,4 +1,78 @@
 {
-  "name": "portfolio",
-  "displayName": "Portfolio | Eslam El Meniawy"
+  "expo": {
+    "name": "Portfolio | Eslam El Meniawy",
+    "slug": "portfolio",
+    "version": "0.0.1",
+    "platforms": ["ios", "android", "web"],
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#FFFBFE",
+    "primaryColor": "#6750A4",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": ["eslam", "elmeniawy", "eslam-elmeniawy"],
+    "assetBundlePatterns": ["**/*"],
+    "plugins": [
+      "./android-queries-plugin",
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "expo-localization"
+    ],
+    "splash": {
+      "image": "./src/assets/images/splash-light.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFBFE"
+    },
+    "ios": {
+      "bundleIdentifier": "elmeniawy.eslam.portfolio",
+      "buildNumber": 1,
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "supportsTablet": true,
+      "splash": {
+        "backgroundColor": "#FFFBFE",
+        "resizeMode": "contain",
+        "image": "./src/assets/images/splash-light.png",
+        "dark": {
+          "backgroundColor": "#1C1B1F",
+          "resizeMode": "contain",
+          "image": "./src/assets/images/splash-dark.png"
+        }
+      }
+    },
+    "android": {
+      "package": "elmeniawy.eslam.portfolio",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFBFE"
+      },
+      "googleServicesFile": "./google-services.json",
+      "splash": {
+        "backgroundColor": "#FFFBFE",
+        "resizeMode": "contain",
+        "image": "./src/assets/images/splash-light.png",
+        "dark": {
+          "backgroundColor": "#1C1B1F",
+          "resizeMode": "contain",
+          "image": "./src/assets/images/splash-dark.png"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./src/assets/images/favicon.png",
+      "themeColor": "#6750A4",
+      "splash": {
+        "backgroundColor": "#FFFBFE",
+        "resizeMode": "contain",
+        "image": "./src/assets/images/splash-light.png"
+      }
+    }
+  }
 }

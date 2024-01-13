@@ -1,36 +1,21 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import * as React from 'react';
-import type {RootStackParamList} from '@src/navigation';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import type { RootStackParamList } from "@src/navigation";
+import { HomeBottomTabs } from "@src/navigation";
+import { Project } from "@src/screens";
+import * as React from "react";
 
-// Screens.
-import {Splash, Home} from '@src/screens';
-
-// Navigators.
-// TODO: Add navigators imports here.
-
-// Modals.
-// TODO: Add modals imports here.
-
-const stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default React.memo(() => (
-  <stack.Navigator
+  <Stack.Navigator
     id="RootStack"
-    initialRouteName="splash"
-    screenOptions={{headerShown: false}}>
+    initialRouteName="Home"
+    screenOptions={{ headerShown: false }}
+  >
     {/* Screens */}
-    <stack.Screen name="splash" component={Splash} />
-    <stack.Screen name="home" component={Home} />
+    <Stack.Screen name="Project" component={Project} />
 
     {/* Navigators */}
-    {/* TODO: Add nested navigators here. */}
-
-    {/* Modals */}
-    <stack.Group
-      screenOptions={{
-        presentation: 'transparentModal',
-      }}>
-      <>{/* TODO: Add modals screens here. */}</>
-    </stack.Group>
-  </stack.Navigator>
+    <Stack.Screen name="Home" component={HomeBottomTabs} />
+  </Stack.Navigator>
 ));

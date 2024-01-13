@@ -1,9 +1,10 @@
-import {useColorScheme} from 'react-native';
-import useAppThemeColorsDark from './useAppThemeColorsDark';
-import useAppThemeColorsLight from './useAppThemeColorsLight';
+import { useColorScheme } from "react-native";
+
+import useAppThemeColorsDark from "./useAppThemeColorsDark";
+import useAppThemeColorsLight from "./useAppThemeColorsLight";
 
 const useAppThemeColors = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === "dark";
 
   const useThemeColors = isDarkMode
     ? useAppThemeColorsDark

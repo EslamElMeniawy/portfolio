@@ -1,17 +1,15 @@
-import {createSlice} from '@reduxjs/toolkit';
-import type {DialogsState} from './dialogs.types';
-import type {PayloadAction} from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+
+import type { DialogsState } from "./dialogs.types";
 
 const initialState = {
   errorDialogTitle: undefined,
   errorDialogMessage: undefined,
-  showLoadingDialog: undefined,
-  showLogoutDialog: undefined,
-  showDeleteAccountDialog: undefined,
 } as DialogsState;
 
 export const errorDialogSlice = createSlice({
-  name: 'dialogs',
+  name: "dialogs",
   initialState,
   reducers: {
     setErrorDialogMessage(state, action: PayloadAction<string>) {
@@ -20,32 +18,14 @@ export const errorDialogSlice = createSlice({
     },
     setErrorDialogTitleMessage(
       state,
-      action: PayloadAction<{title: string; message: string}>,
+      action: PayloadAction<{ title: string; message: string }>,
     ) {
       state.errorDialogTitle = action.payload.title;
       state.errorDialogMessage = action.payload.message;
     },
-    showLoadingDialog(state) {
-      state.showLoadingDialog = true;
-    },
-    showLogoutDialog(state) {
-      state.showLogoutDialog = true;
-    },
-    showDeleteAccountDialog(state) {
-      state.showDeleteAccountDialog = true;
-    },
     removeErrorDialog(state) {
       state.errorDialogTitle = undefined;
       state.errorDialogMessage = undefined;
-    },
-    removeLoadingDialog(state) {
-      state.showLoadingDialog = undefined;
-    },
-    removeLogoutDialog(state) {
-      state.showLogoutDialog = undefined;
-    },
-    removeDeleteAccountDialog(state) {
-      state.showDeleteAccountDialog = undefined;
     },
   },
 });
@@ -53,13 +33,7 @@ export const errorDialogSlice = createSlice({
 export const {
   setErrorDialogMessage,
   setErrorDialogTitleMessage,
-  showLoadingDialog,
-  showLogoutDialog,
-  showDeleteAccountDialog,
   removeErrorDialog,
-  removeLoadingDialog,
-  removeLogoutDialog,
-  removeDeleteAccountDialog,
 } = errorDialogSlice.actions;
 
 export default errorDialogSlice.reducer;

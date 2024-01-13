@@ -1,30 +1,30 @@
-import {configureFonts} from 'react-native-paper';
+import { configureFonts } from "react-native-paper";
 
 const useAppThemeFonts = () => {
-  const baseFont = {fontFamily: 'Rubik-Regular'} as const;
-  const baseVariants = configureFonts({config: baseFont});
+  const baseFont = { fontFamily: "Rubik-Regular" } as const;
+  const baseVariants = configureFonts({ config: baseFont });
 
   const customVariants = {
     // Customize individual base variants.
     titleSmall: {
       ...baseVariants.titleSmall,
-      fontFamily: 'Rubik-SemiBold',
+      fontFamily: "Rubik-SemiBold",
     },
     titleMedium: {
       ...baseVariants.titleMedium,
-      fontFamily: 'Rubik-SemiBold',
+      fontFamily: "Rubik-SemiBold",
     },
     labelSmall: {
       ...baseVariants.labelSmall,
-      fontFamily: 'Rubik-SemiBold',
+      fontFamily: "Rubik-SemiBold",
     },
     labelMedium: {
       ...baseVariants.labelMedium,
-      fontFamily: 'Rubik-SemiBold',
+      fontFamily: "Rubik-SemiBold",
     },
     labelLarge: {
       ...baseVariants.labelLarge,
-      fontFamily: 'Rubik-SemiBold',
+      fontFamily: "Rubik-SemiBold",
     },
   } as const;
 

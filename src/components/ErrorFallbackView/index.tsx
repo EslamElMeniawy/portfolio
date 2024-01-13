@@ -1,56 +1,60 @@
-import {Text, Button} from '@eslam-elmeniawy/react-native-common-components';
-import * as React from 'react';
-import {StyleSheet} from 'react-native';
-import {hide as rnBootSplashHide} from 'react-native-bootsplash';
-import RNRestart from 'react-native-restart';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Screen} from '@src/components';
-import {translate} from '@src/core';
-import {useAppTheme} from '@src/utils';
-import styles from './styles';
+import { Screen } from "@src/components";
+import { translate } from "@src/core";
+import { restart, useAppTheme } from "@src/utils";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+import * as React from "react";
+import { StyleSheet } from "react-native";
+import { Text, Button } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+
+import styles from "./styles";
 
 export default React.memo(() => {
   const theme = useAppTheme();
 
+  useFonts({
+    "Rubik-Regular": require("@src/assets/fonts/Rubik-Regular.ttf"),
+    "Rubik-SemiBold": require("@src/assets/fonts/Rubik-SemiBold.ttf"),
+  });
+
   React.useEffect(() => {
-    rnBootSplashHide();
+    SplashScreen.hideAsync();
   }, []);
 
   return (
     <SafeAreaProvider>
       <Screen style={styles.container}>
         <Text
-          type="bold"
-          size={18}
+          variant="titleLarge"
           style={StyleSheet.flatten([
-            {color: theme.colors.onBackground},
+            { color: theme.colors.onBackground },
             styles.text,
             styles.title,
-          ])}>
-          {translate('error_fallback_title')}
+          ])}
+        >
+          {translate("error_fallback_title")}
         </Text>
         <Text
           style={StyleSheet.flatten([
-            {color: theme.colors.onBackground},
+            { color: theme.colors.onBackground },
             styles.text,
             styles.message,
-          ])}>
-          {translate('error_fallback_message')}
+          ])}
+        >
+          {translate("error_fallback_message")}
         </Text>
         <Button
-          text={translate('restart_app')}
-          onPress={() => RNRestart.Restart()}
+          onPress={() => restart()}
           style={StyleSheet.compose(
-            {backgroundColor: theme.colors.primary},
+            { backgroundColor: theme.colors.primary },
             styles.btn,
           )}
-          textProps={{
-            style: StyleSheet.compose(
-              {color: theme.colors.onPrimary},
-              styles.btnTxt,
-            ),
-          }}
-        />
+          textColor={theme.colors.onPrimary}
+          labelStyle={styles.btnTxt}
+        >
+          {translate("restart_app")}
+        </Button>
       </Screen>
     </SafeAreaProvider>
   );

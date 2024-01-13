@@ -1,46 +1,46 @@
-import axios from 'axios';
-import {default as Config} from 'react-native-config';
-import {translate, getCurrentLocale} from '@src/core/I18n';
-import ConsoleColors from './ConsoleColors';
-import type {AxiosResponse, InternalAxiosRequestConfig} from 'axios';
+import { translate, getCurrentLocale } from "@src/core/I18n";
+import axios from "axios";
+import type { AxiosResponse, InternalAxiosRequestConfig } from "axios";
+
+import ConsoleColors from "./ConsoleColors";
 
 const getLogMessage = (message: string) => `## HttpClient:: ${message}`;
 
 const addHeaders = (config: InternalAxiosRequestConfig<any>) => {
-  config.headers.Accept = 'application/json';
-  config.headers['Content-Type'] = 'application/json';
-  config.headers['Accept-Language'] = getCurrentLocale();
-  config.headers['cache-control'] = 'no-cache';
+  config.headers.Accept = "application/json";
+  config.headers["Content-Type"] = "application/json";
+  config.headers["Accept-Language"] = getCurrentLocale();
+  config.headers["cache-control"] = "no-cache";
 };
 
 const getLogMethodColor = (method?: string) => {
   let methodColor: string | undefined;
 
   switch (method) {
-    case 'GET':
+    case "GET":
       methodColor = ConsoleColors.GET;
       break;
-    case 'HEAD':
+    case "HEAD":
       methodColor = ConsoleColors.HEAD;
       break;
 
-    case 'POST':
+    case "POST":
       methodColor = ConsoleColors.POST;
       break;
 
-    case 'PUT':
+    case "PUT":
       methodColor = ConsoleColors.PUT;
       break;
 
-    case 'PATCH':
+    case "PATCH":
       methodColor = ConsoleColors.PATCH;
       break;
 
-    case 'DELETE':
+    case "DELETE":
       methodColor = ConsoleColors.DELETE;
       break;
 
-    case 'OPTIONS':
+    case "OPTIONS":
       methodColor = ConsoleColors.OPTIONS;
       break;
 
@@ -62,7 +62,7 @@ const requestFulfilledInterceptor = (
   console.info(
     getLogMessage(`🚀 Sending %c${method}%c Request to %c${config.url}`),
     `color: ${methodColor}`,
-    'color: undefined',
+    "color: undefined",
     `color: ${ConsoleColors.URL}`,
     config,
   );
@@ -103,9 +103,9 @@ const responseRejectedInterceptor = (error: any) => {
 };
 
 const httpClient = axios.create({
-  baseURL: Config.API_URL,
+  baseURL: process.env.EXPO_API_URL,
   timeout: 60 * 1 * 1000,
-  timeoutErrorMessage: translate('network_error'),
+  timeoutErrorMessage: translate("network_error"),
 });
 
 httpClient.interceptors.request.use(

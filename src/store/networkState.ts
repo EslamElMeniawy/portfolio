@@ -1,6 +1,7 @@
-import {createSlice} from '@reduxjs/toolkit';
-import type {NetworkStateState} from './networkState.types';
-import type {PayloadAction} from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+
+import type { NetworkStateState } from "./networkState.types";
 
 const initialState = {
   isInternetAvailable: true,
@@ -8,7 +9,7 @@ const initialState = {
 } as NetworkStateState;
 
 export const networkStateSlice = createSlice({
-  name: 'networkState',
+  name: "networkState",
   initialState,
   reducers: {
     setIsInternetAvailable(state, action: PayloadAction<boolean>) {

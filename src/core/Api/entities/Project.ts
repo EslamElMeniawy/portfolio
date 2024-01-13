@@ -1,9 +1,12 @@
-import type {FlatListItem} from '@eslam-elmeniawy/react-native-common-components';
-
-interface Project extends FlatListItem {
-  id?: number | string;
-  title?: string;
-  message?: string;
+interface Project {
+  id?: number;
+  name?: string;
+  icon?: string;
+  details?: string[];
+  programmingLang?: string;
+  androidLink?: string;
+  iosLink?: string;
+  screens?: string[];
 }
 
 export default Project;

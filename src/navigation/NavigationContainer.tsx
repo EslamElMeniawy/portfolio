@@ -1,7 +1,7 @@
-import analytics from '@react-native-firebase/analytics';
-import {NavigationContainer} from '@react-navigation/native';
-import * as React from 'react';
-import {navigationRef, RootStack} from '@src/navigation';
+import analytics from "@react-native-firebase/analytics";
+import { NavigationContainer } from "@react-navigation/native";
+import { navigationRef, RootStack } from "@src/navigation";
+import * as React from "react";
 
 export default React.memo(() => {
   const routeNameRef = React.useRef<string | undefined>();
@@ -25,7 +25,8 @@ export default React.memo(() => {
 
         // Save the current route name for later comparison.
         routeNameRef.current = currentRouteName;
-      }}>
+      }}
+    >
       <RootStack />
     </NavigationContainer>
   );

@@ -1,5 +1,5 @@
 enum LocalStorageKeys {
-  LANGUAGE = 'Language',
+  LANGUAGE = "Language",
 }
 
 export default LocalStorageKeys;

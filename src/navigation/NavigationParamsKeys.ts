@@ -1,4 +1,5 @@
-// TODO: Add the navigation params keys here and use them inside application when needed.
-enum NavigationParamsKeys {}
+enum NavigationParamsKeys {
+  PROJECT = "project",
+}
 
 export default NavigationParamsKeys;

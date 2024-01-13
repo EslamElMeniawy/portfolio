@@ -1,6 +1,6 @@
-import {useFocusEffect} from '@react-navigation/native';
-import * as React from 'react';
-import type {NotifyOnChangeProps} from '@tanstack/query-core';
+import { useFocusEffect } from "@react-navigation/native";
+import type { NotifyOnChangeProps } from "@tanstack/query-core";
+import * as React from "react";
 
 export function useFocusNotifyOnChangeProps(
   notifyOnChangeProps?: NotifyOnChangeProps,
@@ -22,7 +22,7 @@ export function useFocusNotifyOnChangeProps(
       return [];
     }
 
-    if (typeof notifyOnChangeProps === 'function') {
+    if (typeof notifyOnChangeProps === "function") {
       return notifyOnChangeProps();
     }
 
