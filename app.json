@@ -32,7 +32,6 @@
     },
     "ios": {
       "bundleIdentifier": "elmeniawy.eslam.portfolio",
-      "buildNumber": 1,
       "googleServicesFile": "./GoogleService-Info.plist",
       "supportsTablet": true,
       "splash": {
