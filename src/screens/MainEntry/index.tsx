@@ -2,7 +2,6 @@ import crashlytics from "@react-native-firebase/crashlytics";
 import { ErrorFallbackView } from "@src/components";
 import * as React from "react";
 import { withErrorBoundary } from "react-error-boundary";
-import { Platform } from "react-native";
 
 import App from "./App";
 
