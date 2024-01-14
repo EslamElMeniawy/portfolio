@@ -26,7 +26,7 @@
       "expo-localization"
     ],
     "splash": {
-      "image": "./src/assets/images/splash-light.png",
+      "image": "./src/assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#FFFBFE"
     },
@@ -37,12 +37,7 @@
       "splash": {
         "backgroundColor": "#FFFBFE",
         "resizeMode": "contain",
-        "image": "./src/assets/images/splash-light.png",
-        "dark": {
-          "backgroundColor": "#1C1B1F",
-          "resizeMode": "contain",
-          "image": "./src/assets/images/splash-dark.png"
-        }
+        "image": "./src/assets/images/splash.png"
       }
     },
     "android": {
@@ -56,12 +51,7 @@
       "splash": {
         "backgroundColor": "#FFFBFE",
         "resizeMode": "contain",
-        "image": "./src/assets/images/splash-light.png",
-        "dark": {
-          "backgroundColor": "#1C1B1F",
-          "resizeMode": "contain",
-          "image": "./src/assets/images/splash-dark.png"
-        }
+        "image": "./src/assets/images/splash.png"
       }
     },
     "web": {
@@ -70,7 +60,7 @@
       "splash": {
         "backgroundColor": "#FFFBFE",
         "resizeMode": "contain",
-        "image": "./src/assets/images/splash-light.png"
+        "image": "./src/assets/images/splash.png"
       }
     }
   }

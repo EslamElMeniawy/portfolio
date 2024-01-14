@@ -3,6 +3,7 @@ import { NavigationContainer } from "@src/navigation";
 import { useAppTheme, queryClient, getStatusBarHeight } from "@src/utils";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
 import * as React from "react";
 import { Provider as PaperProvider } from "react-native-paper";
 import { ToastProvider } from "react-native-toast-notifications";
@@ -24,6 +25,12 @@ export default React.memo(() => {
   useReactQueryFocusManager();
   useReactQueryOnlineManager();
   const theme = useAppTheme();
+
+  React.useEffect(() => {
+    if (languageLoaded && fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [languageLoaded, fontsLoaded]);
 
   // #region UI
   return languageLoaded && fontsLoaded ? (

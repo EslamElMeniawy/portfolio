@@ -1,10 +1,13 @@
 import "react-native-gesture-handler";
+import * as SplashScreen from "expo-splash-screen";
 import * as React from "react";
 import { enableScreens } from "react-native-screens";
 
 import * as serviceWorkerRegistration from "./src/service-worker/serviceWorkerRegistration";
 
 enableScreens();
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const App = React.lazy(() => import("@src/screens/MainEntry"));
