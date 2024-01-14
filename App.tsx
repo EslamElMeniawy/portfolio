@@ -1,4 +1,5 @@
 import "react-native-gesture-handler";
+import { MainEntry } from "@src/screens";
 import * as SplashScreen from "expo-splash-screen";
 import * as React from "react";
 import { enableScreens } from "react-native-screens";
@@ -10,13 +11,7 @@ enableScreens();
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const App = React.lazy(() => import("@src/screens/MainEntry"));
-
-  return (
-    <React.Suspense>
-      <App />
-    </React.Suspense>
-  );
+  return <MainEntry />;
 }
 
 // If you want your app to work offline and load faster, you can change
