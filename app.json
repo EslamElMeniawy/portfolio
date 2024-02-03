@@ -3,14 +3,24 @@
     "name": "Portfolio | Eslam El Meniawy",
     "slug": "portfolio",
     "version": "0.0.1",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "orientation": "default",
     "userInterfaceStyle": "automatic",
     "backgroundColor": "#FFFBFE",
     "primaryColor": "#6750A4",
     "icon": "./src/assets/images/icon.png",
-    "scheme": ["eslam", "elmeniawy", "eslam-elmeniawy"],
-    "assetBundlePatterns": ["**/*"],
+    "scheme": [
+      "eslam",
+      "elmeniawy",
+      "eslam-elmeniawy"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "plugins": [
       "./android-queries-plugin",
       "@react-native-firebase/app",
@@ -23,7 +33,8 @@
           }
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      "expo-font"
     ],
     "splash": {
       "image": "./src/assets/images/splash.png",
