@@ -103,7 +103,7 @@ const responseRejectedInterceptor = (error: any) => {
 };
 
 const httpClient = axios.create({
-  baseURL: process.env.EXPO_API_URL,
+  baseURL: process.env.API_URL,
   timeout: 60 * 1 * 1000,
   timeoutErrorMessage: translate("network_error"),
 });
