@@ -1,3 +1,4 @@
+import { ScreenTitle } from "@src/components";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { Appbar } from "react-native-paper";
@@ -8,7 +9,7 @@ export default React.memo(() => {
   return (
     <Appbar.Header statusBarHeight={0} mode="large">
       <Appbar.BackAction />
-      <Appbar.Content title={translate("project")} />
+      <Appbar.Content title={<ScreenTitle title={translate("project")} />} />
     </Appbar.Header>
   );
 });
