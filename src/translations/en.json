@@ -16,5 +16,8 @@
   "portfolio": "Portfolio",
   "resume": "Resume",
   "contact_me": "Contact Me",
-  "information": "Information"
+  "information": "Information",
+  "projects": "Projects",
+  "details": "Details",
+  "project_details": "Project Details"
 }

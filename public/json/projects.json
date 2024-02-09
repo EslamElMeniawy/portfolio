@@ -24,7 +24,7 @@
   {
     "id": 41,
     "name": "YTS",
-    "image": "https://eslamelmeniawy.github.io/img/icons/yts.svg",
+    "image": "https://eslamelmeniawy.github.io/img/icons/yts.png",
     "details": [
       "Display list of latest, top rated, most liked and most downloaded movies.",
       "Search for the movie you want.",
@@ -443,7 +443,7 @@
   {
     "id": 18,
     "name": "Al-Farouq",
-    "image": "https://eslamelmeniawy.github.io/img/icons/alfarouq.pn",
+    "image": "https://eslamelmeniawy.github.io/img/icons/alfarouq.png",
     "details": [
       "Al-Farouq HR system.",
       "Login to your account.",
@@ -473,7 +473,7 @@
   {
     "id": 16,
     "name": "Movie Db Popular People",
-    "image": "https://eslamelmeniawy.github.io/img/icons/tmdb.svg",
+    "image": "https://eslamelmeniawy.github.io/img/icons/tmdb.png",
     "details": [
       "Displaying a list of popular people (actors, directors ..etc) from the movie db site API.",
       "Displaying the details of person on selecting him/her with the ability of displaying and downloading profile images in full size."

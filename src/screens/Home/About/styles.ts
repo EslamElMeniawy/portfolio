@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
     gap: vs(16),
   },
   text: {
-    fontSize: ms(13),
+    fontSize: ms(12),
+    lineHeight: ms(16),
     textAlign: "justify",
   },
 });

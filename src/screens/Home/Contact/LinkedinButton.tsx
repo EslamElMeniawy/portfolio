@@ -18,10 +18,7 @@ export default React.memo((props: ContactInfoProps) => {
   return data && data.linkedin ? (
     <Button
       icon={({ color, size }) => (
-        <AppSvgImages.linkedin
-          fill={color}
-          style={{ width: size, height: size }}
-        />
+        <AppSvgImages.linkedin fill={color} width={size} height={size} />
       )}
       labelStyle={styles.buttonText}
       onPress={_onPress}

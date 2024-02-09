@@ -16,10 +16,7 @@ export default React.memo((props: ContactInfoProps) => {
   return data && data.github ? (
     <Button
       icon={({ color, size }) => (
-        <AppSvgImages.github
-          fill={color}
-          style={{ width: size, height: size }}
-        />
+        <AppSvgImages.github fill={color} width={size} height={size} />
       )}
       labelStyle={styles.buttonText}
       onPress={_onPress}

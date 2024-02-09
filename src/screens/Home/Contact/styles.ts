@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     flex: 1,
-    fontSize: ms(13),
+    fontSize: ms(14),
     lineHeight: ms(20),
     textAlign: "left",
     textDecorationLine: "underline",
