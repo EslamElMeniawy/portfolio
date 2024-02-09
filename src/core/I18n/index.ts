@@ -33,7 +33,7 @@ export const setI18nConfig = async () => {
   console.info(getLogMessage("setI18nConfig"));
 
   await i18n.init({
-    debug: process.env.EXPO_ENABLE_LOCAL_LOG === "true",
+    debug: process.env.ENABLE_LOCAL_LOG === "true",
     compatibilityJSON: "v3",
     resources,
     lng: defaultLocale,

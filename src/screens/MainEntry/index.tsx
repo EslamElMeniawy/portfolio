@@ -11,7 +11,7 @@ export default withErrorBoundary(App, {
     console.error("ErrorBoundary::onError", error, info);
 
     // Log error to Firebase.
-    if (process.env.EXPO_ENABLE_FIREBASE_LOG) {
+    if (process.env.ENABLE_FIREBASE_LOG === "true") {
       crashlytics().recordError(
         new Error(
           `## ERROR ## Message: ErrorBoundary::onError ## Data: ${JSON.stringify(

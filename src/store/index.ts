@@ -10,7 +10,7 @@ export const store = configureStore({
     networkState: networkStateReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    process.env.EXPO_ENABLE_LOCAL_LOG === "true"
+    process.env.ENABLE_LOCAL_LOG === "true"
       ? getDefaultMiddleware().concat(
           logger as unknown as ReturnType<typeof getDefaultMiddleware>,
         )
