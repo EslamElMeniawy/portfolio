@@ -6,6 +6,7 @@ import { HomeBottomTabsParamList, NavigationParamsKeys } from "@src/navigation";
 type RootStackParamList = {
   Home: NavigatorScreenParams<HomeBottomTabsParamList>;
   Project: { [NavigationParamsKeys.PROJECT]: Project | undefined } | undefined;
+  NotFound: undefined;
 };
 
 type RootStackScreenProps<T extends keyof RootStackParamList> =

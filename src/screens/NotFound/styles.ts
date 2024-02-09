@@ -12,12 +12,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   title: {
-    fontFamily: "Rubik-SemiBold",
     fontSize: ms(22),
     lineHeight: ms(28),
   },
   message: {
-    fontFamily: "Rubik-Regular",
     fontSize: ms(12),
     lineHeight: ms(16),
   },
@@ -27,7 +25,6 @@ const styles = StyleSheet.create({
     marginTop: vs(32),
   },
   btnTxt: {
-    fontFamily: "Rubik-SemiBold",
     fontSize: ms(14),
     lineHeight: ms(20),
   },

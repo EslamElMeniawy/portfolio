@@ -1,7 +1,9 @@
 {
   "app_name": "Portfolio | Eslam El Meniawy",
-  "error_fallback_title": "Oops, Something Went Wrong",
-  "error_fallback_message": "The app ran into a problem and could not continue. We apologize for any inconvenience this has caused! Press the button below to restart the app.",
+  "error_fallback": {
+    "title": "Oops, Something Went Wrong",
+    "message": "The app ran into a problem and could not continue. We apologize for any inconvenience this has caused! Press the button below to restart the app."
+  },
   "restart_app": "Restart App",
   "ok": "OK",
   "internet_lost": "Internet connection lost!",
@@ -12,6 +14,12 @@
   "error_while_action": "Error while {{action}}",
   "no_data_available": "No {{data}} available",
   "error_load_data": "Error while loading {{data}}",
+  "loading": "Loading",
+  "page_not_found": {
+    "title": "Oops, Page Not Found",
+    "message": "The app couldn't find the requested page"
+  },
+  "home_page": "Home Page",
   "about_me": "About Me",
   "portfolio": "Portfolio",
   "resume": "Resume",
