@@ -15,8 +15,8 @@ export default React.memo(() => {
   const { t: translate } = useTranslation();
   const linkTo = useLinkTo();
 
-  const onHomePagePress = () => {
-    console.info(getLogMessage("onHomePagePress"));
+  const _onHomePagePress = () => {
+    console.info(getLogMessage("_onHomePagePress"));
     linkTo({ screen: "Home" });
   };
 
@@ -32,7 +32,7 @@ export default React.memo(() => {
         {translate("page_not_found.message")}
       </Text>
       <Button
-        onPress={onHomePagePress}
+        onPress={_onHomePagePress}
         style={styles.btn}
         labelStyle={styles.btnTxt}
       >

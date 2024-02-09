@@ -20,8 +20,8 @@ export default React.memo((props: ProjectItemProps) => {
   const { t: translate } = useTranslation();
   const linkTo = useLinkTo();
 
-  const onProjectPress = () => {
-    console.info(getLogMessage("onProjectPress"), project);
+  const _onProjectPress = () => {
+    console.info(getLogMessage("_onProjectPress"), project);
 
     linkTo({
       screen: "Project",
@@ -30,11 +30,11 @@ export default React.memo((props: ProjectItemProps) => {
   };
 
   return (
-    <Card onPress={onProjectPress} style={styles.projectCard}>
+    <Card onPress={_onProjectPress} style={styles.projectCard}>
       <ProjectItemCover {...props} />
       <ProjectItemContent {...props} />
       <Card.Actions>
-        <Button labelStyle={styles.detailsButtonText} onPress={onProjectPress}>
+        <Button labelStyle={styles.detailsButtonText} onPress={_onProjectPress}>
           {translate("details")}
         </Button>
       </Card.Actions>

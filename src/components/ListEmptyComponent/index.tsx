@@ -2,6 +2,7 @@ import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { View } from "react-native";
 import { Icon, Text } from "react-native-paper";
+import { ms } from "react-native-size-matters";
 
 import styles from "./styles";
 import type { Props } from "./types";
@@ -13,7 +14,7 @@ export default React.memo((props: Props) => {
   return (
     <View style={styles.container}>
       <Icon
-        size={64}
+        size={ms(64)}
         source={
           isLoadingError ? "alert-circle-outline" : "database-remove-outline"
         }

@@ -1,12 +1,8 @@
 import { AppSvgImages } from "@src/constants";
 import { useAppTheme } from "@src/utils";
 import * as React from "react";
-import {
-  View,
-  type LayoutChangeEvent,
-  type LayoutRectangle,
-  StyleSheet,
-} from "react-native";
+import { View, StyleSheet } from "react-native";
+import type { LayoutChangeEvent, LayoutRectangle } from "react-native";
 import { Card } from "react-native-paper";
 
 import styles from "./styles";

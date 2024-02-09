@@ -2,6 +2,7 @@ import { Screen } from "@src/components";
 import { RootStackScreenProps } from "@src/navigation";
 import * as React from "react";
 
+import Content from "./Content";
 import Header from "./Header";
 
 export default React.memo((props: RootStackScreenProps<"Project">) => {
@@ -12,6 +13,7 @@ export default React.memo((props: RootStackScreenProps<"Project">) => {
   return (
     <Screen>
       <Header project={project} />
+      <Content project={project} />
     </Screen>
   );
 });

@@ -27,5 +27,10 @@
   "information": "Information",
   "projects": "Projects",
   "details": "Details",
-  "project_details": "Project Details"
+  "project_details": "Project Details",
+  "project": "Project",
+  "description": "Description",
+  "screenshots": "Screenshots",
+  "developed_using": "Developed Using",
+  "download_links": "Download Links"
 }

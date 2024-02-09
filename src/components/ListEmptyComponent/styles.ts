@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { vs } from "react-native-size-matters";
+import { vs, ms } from "react-native-size-matters";
 
 const styles = StyleSheet.create({
   container: {
@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
   message: {
     marginTop: vs(8),
     textAlign: "center",
+    fontSize: ms(12),
+    lineHeight: ms(16),
   },
 });
 

@@ -1,5 +1,6 @@
 import { translate } from "@src/core";
 import * as Linking from "expo-linking";
+import { Platform } from "react-native";
 import { Toast } from "react-native-toast-notifications";
 
 const getLogMessage = (message: string) => `## LinkingUtils:: ${message}`;
@@ -40,11 +41,15 @@ const appendEmailSubjectBody = (
   return appendedLink;
 };
 
-const open = async (url: string, errorMessageKey?: string) => {
+const open = async (url: string, errorMessageKey?: string, isUrl?: boolean) => {
   console.info(getLogMessage("open"), url);
 
   try {
-    await Linking.openURL(url);
+    if (isUrl && Platform.OS === "web") {
+      window.open(url, "_blank");
+    } else {
+      await Linking.openURL(url);
+    }
   } catch (error) {
     console.warn(getLogMessage(`Failed to open: ${url}`), error);
 
@@ -59,7 +64,7 @@ export const openUrl = (url?: string, errorMessageKey?: string) => {
   console.info(getLogMessage("openUrl"), url);
 
   if (url && url.length) {
-    open(url, errorMessageKey ?? "error_open_url");
+    open(url, errorMessageKey ?? "error_open_url", true);
   }
 };
 

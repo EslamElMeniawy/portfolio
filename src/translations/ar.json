@@ -13,7 +13,7 @@
   "error_open_phone": "خطأ أثناء فتح الهاتف\nتأكد من تثبيت تطبيق الهاتف لديك",
   "error_while_action": "خطأ اثناء {{action}}",
   "no_data_available": "لا توجد {{data}} متاحة",
-  "error_load_data": "خطأ اثناء تحميل {{data}}",
+  "error_load_data": "خطأ اثناء تحميل الـ {{data}}",
   "loading": "جاري التحميل",
   "page_not_found": {
     "title": "عفوًا، لم يتم العثور على الصفحة",
@@ -25,7 +25,12 @@
   "resume": "السيرة الذاتية",
   "contact_me": "اتصل بي",
   "information": "معلومات",
-  "projects": "المشاريع",
+  "projects": "مشاريع",
   "details": "التفاصيل",
-  "project_details": "تفاصيل المشروع"
+  "project_details": "تفاصيل المشروع",
+  "project": "مشروع",
+  "description": "الوصف",
+  "screenshots": "لقطات الشاشة",
+  "developed_using": "تم تطويره باستخدام",
+  "download_links": "روابط التحميل"
 }
