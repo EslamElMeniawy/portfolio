@@ -17,7 +17,7 @@ export default React.memo((props: ProjectProps) => {
           {translate("description")}
         </Text>
         {project?.details?.map((item) => (
-          <Text key={item} variant="bodyMedium" style={styles.detailsText}>
+          <Text key={item} variant="bodyMedium" style={styles.descriptionText}>
             {item}
           </Text>
         ))}

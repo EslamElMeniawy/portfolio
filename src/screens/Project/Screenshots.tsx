@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
+import { View } from "react-native";
 import { Card, Text } from "react-native-paper";
 
 import styles from "./styles";
@@ -17,6 +18,7 @@ export default React.memo((props: ProjectProps) => {
           {translate("screenshots")}
         </Text>
         {/* TODO: Display screenshots */}
+        <View>{}</View>
       </Card.Content>
     </Card>
   ) : null;

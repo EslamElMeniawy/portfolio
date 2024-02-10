@@ -1,7 +1,7 @@
-import { AppSvgImages } from "@src/constants";
 import { useAppTheme } from "@src/utils";
+import { Image } from "expo-image";
 import * as React from "react";
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { ms } from "react-native-size-matters";
 
 import styles from "./styles";
@@ -13,9 +13,6 @@ export default React.memo((props: ImageProps) => {
 
   const theme = useAppTheme();
 
-  const [isLoading, setLoading] = React.useState<boolean>(true);
-  const [isError, setError] = React.useState<boolean>(false);
-
   return project && project.image ? (
     <View
       style={StyleSheet.flatten([
@@ -24,21 +21,13 @@ export default React.memo((props: ImageProps) => {
       ])}
     >
       <Image
-        source={{ uri: project.image }}
-        resizeMode="contain"
         style={styles.image}
-        onLoadEnd={() => setLoading(false)}
-        onError={() => setError(true)}
+        source={project.image}
+        contentFit="contain"
+        placeholder={project.imageHash}
+        placeholderContentFit="contain"
+        transition={1000}
       />
-      {(isLoading || isError) && (
-        <View style={styles.placeholderImage}>
-          <AppSvgImages.logo
-            fill={theme.colors.onSurfaceVariant}
-            width={imageHeight}
-            height={imageHeight}
-          />
-        </View>
-      )}
     </View>
   ) : null;
 });

@@ -22,16 +22,8 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   image: {
+    flex: 1,
     width: "100%",
-    height: "100%",
-  },
-  placeholderImage: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
   },
   infoCardTextContainer: {
     flex: 1,
@@ -54,10 +46,13 @@ const styles = StyleSheet.create({
     fontSize: ms(22),
     lineHeight: ms(28),
   },
-  detailsText: {
+  descriptionText: {
     fontSize: ms(12),
     lineHeight: ms(16),
     textAlign: "justify",
+  },
+  screenshotsContainer: {
+    backgroundColor: "red",
   },
 });
 

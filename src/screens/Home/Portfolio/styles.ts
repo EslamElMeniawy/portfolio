@@ -17,12 +17,19 @@ const styles = StyleSheet.create({
     flex: 1,
     marginVertical: vs(8),
     marginHorizontal: s(8),
+    borderRadius: ms(8),
   },
-  projectImagePlaceholderContainer: {
-    position: "absolute",
+  projectImageContainer: {
+    width: "100%",
+    aspectRatio: 2 / 1,
+    borderRadius: ms(8),
+    overflow: "hidden",
     alignItems: "center",
     justifyContent: "center",
-    overflow: "hidden",
+  },
+  projectImage: {
+    flex: 1,
+    width: "100%",
   },
   projectTitle: {
     fontSize: ms(22),

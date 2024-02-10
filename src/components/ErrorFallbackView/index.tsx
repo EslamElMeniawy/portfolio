@@ -6,6 +6,7 @@ import * as SplashScreen from "expo-splash-screen";
 import * as React from "react";
 import { StyleSheet } from "react-native";
 import { Text, Button } from "react-native-paper";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import styles from "./styles";
 
@@ -22,37 +23,39 @@ export default React.memo(() => {
   }, []);
 
   return (
-    <Screen style={styles.container}>
-      <Text
-        variant="titleLarge"
-        style={StyleSheet.flatten([
-          { color: theme.colors.onBackground },
-          styles.text,
-          styles.title,
-        ])}
-      >
-        {translate("error_fallback.title")}
-      </Text>
-      <Text
-        style={StyleSheet.flatten([
-          { color: theme.colors.onBackground },
-          styles.text,
-          styles.message,
-        ])}
-      >
-        {translate("error_fallback.message")}
-      </Text>
-      <Button
-        onPress={() => restart()}
-        style={StyleSheet.compose(
-          { backgroundColor: theme.colors.primary },
-          styles.btn,
-        )}
-        textColor={theme.colors.onPrimary}
-        labelStyle={styles.btnTxt}
-      >
-        {translate("restart_app")}
-      </Button>
-    </Screen>
+    <SafeAreaProvider>
+      <Screen style={styles.container}>
+        <Text
+          variant="titleLarge"
+          style={StyleSheet.flatten([
+            { color: theme.colors.onBackground },
+            styles.text,
+            styles.title,
+          ])}
+        >
+          {translate("error_fallback.title")}
+        </Text>
+        <Text
+          style={StyleSheet.flatten([
+            { color: theme.colors.onBackground },
+            styles.text,
+            styles.message,
+          ])}
+        >
+          {translate("error_fallback.message")}
+        </Text>
+        <Button
+          onPress={() => restart()}
+          style={StyleSheet.compose(
+            { backgroundColor: theme.colors.primary },
+            styles.btn,
+          )}
+          textColor={theme.colors.onPrimary}
+          labelStyle={styles.btnTxt}
+        >
+          {translate("restart_app")}
+        </Button>
+      </Screen>
+    </SafeAreaProvider>
   );
 });
