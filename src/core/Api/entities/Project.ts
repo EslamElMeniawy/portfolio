@@ -1,3 +1,5 @@
+import Screenshot from "./Screenshot";
+
 interface Project {
   id?: number;
   name?: string;
@@ -7,7 +9,7 @@ interface Project {
   programmingLang?: string;
   androidLink?: string;
   iosLink?: string;
-  screens?: string[];
+  screens?: Screenshot[];
 }
 
 export default Project;

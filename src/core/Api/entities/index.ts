@@ -3,4 +3,5 @@ export type { default as Education } from "./Education";
 export type { default as Language } from "./Language";
 export type { default as Project } from "./Project";
 export type { default as Resume } from "./Resume";
+export type { default as Screenshot } from "./Screenshot";
 export type { default as WorkExperience } from "./WorkExperience";
