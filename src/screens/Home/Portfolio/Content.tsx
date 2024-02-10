@@ -1,6 +1,6 @@
 import { ListEmptyComponent, ListLoadingMore } from "@src/components";
 import { useGetProjectsApi } from "@src/core";
-import { useAppTheme, useFocusNotifyOnChangeProps } from "@src/utils";
+import { useAppTheme } from "@src/utils";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { FlatList, RefreshControl, useWindowDimensions } from "react-native";
@@ -12,7 +12,6 @@ import styles from "./styles";
 
 export default React.memo(() => {
   const { t: translate } = useTranslation();
-  const notifyOnChangeProps = useFocusNotifyOnChangeProps();
   const theme = useAppTheme();
   const { width } = useWindowDimensions();
 
@@ -25,9 +24,7 @@ export default React.memo(() => {
     fetchNextPage,
     error,
     isLoadingError,
-  } = useGetProjectsApi({
-    notifyOnChangeProps: notifyOnChangeProps?.(),
-  });
+  } = useGetProjectsApi();
 
   const projectsList = allPages?.pages
     ?.map((page) => (page.data ? page.data : []))

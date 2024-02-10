@@ -9,7 +9,7 @@
     "backgroundColor": "#FFFBFE",
     "primaryColor": "#6750A4",
     "icon": "./src/assets/images/icon.png",
-    "scheme": ["eslam", "elmeniawy", "eslam-elmeniawy", "eslamelmeniawy"],
+    "scheme": "eslamelmeniawy",
     "assetBundlePatterns": ["**/*"],
     "plugins": [
       "./android-queries-plugin",

@@ -25,7 +25,7 @@ export default React.memo((props: ProjectItemProps) => {
 
     linkTo({
       screen: "Project",
-      params: { [NavigationParamsKeys.PROJECT]: project },
+      params: { [NavigationParamsKeys.PROJECT]: project.id },
     });
   };
 

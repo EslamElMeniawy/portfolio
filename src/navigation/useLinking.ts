@@ -4,9 +4,6 @@ export const useLinking = () => {
   const linking = {
     prefixes: [
       Linking.createURL("/"),
-      "eslam://",
-      "elmeniawy://",
-      "eslam-elmeniawy://",
       "eslamelmeniawy://",
       "https://eslamelmeniawy.github.io",
     ],
@@ -20,7 +17,12 @@ export const useLinking = () => {
             Contact: "contact",
           },
         },
-        Project: "project",
+        Project: {
+          path: "project/:project?",
+          parse: {
+            project: Number,
+          },
+        },
         NotFound: "*",
       },
     },
