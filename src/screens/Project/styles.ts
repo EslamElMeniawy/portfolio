@@ -52,7 +52,17 @@ const styles = StyleSheet.create({
     textAlign: "justify",
   },
   screenshotsContainer: {
-    backgroundColor: "red",
+    width: "100%",
+    height: "auto",
+    gap: ms(8),
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  screenshot: {
+    width: 300,
+    aspectRatio: 1 / 2,
   },
 });
 

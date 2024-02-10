@@ -1,3 +1,4 @@
+import { Image } from "expo-image";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { View } from "react-native";
@@ -17,8 +18,17 @@ export default React.memo((props: ProjectProps) => {
         <Text variant="titleLarge" style={styles.cardTitle}>
           {translate("screenshots")}
         </Text>
-        {/* TODO: Display screenshots */}
-        <View>{}</View>
+        <View style={styles.screenshotsContainer}>
+          {project.screens.map((screen) => (
+            <Image
+              key={screen.image}
+              style={styles.screenshot}
+              source={screen.image}
+              placeholder={screen.hash}
+              transition={1000}
+            />
+          ))}
+        </View>
       </Card.Content>
     </Card>
   ) : null;
