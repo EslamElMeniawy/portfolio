@@ -40,7 +40,7 @@ export default React.memo((props: ProjectProps) => {
             mode="contained"
             size={ms(24)}
             icon={(iconProps) => (
-              <AppSvgImages.android
+              <AppSvgImages.Android
                 fill={iconProps.color}
                 width={iconProps.size}
                 height={iconProps.size}
@@ -54,7 +54,7 @@ export default React.memo((props: ProjectProps) => {
             mode="contained"
             size={ms(24)}
             icon={(iconProps) => (
-              <AppSvgImages.apple
+              <AppSvgImages.Apple
                 fill={iconProps.color}
                 width={iconProps.size}
                 height={iconProps.size}

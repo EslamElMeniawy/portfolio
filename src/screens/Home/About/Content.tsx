@@ -24,7 +24,7 @@ export default React.memo(() => {
       refreshing={isFetching}
       onRefresh={() => refetch()}
     >
-      {data && data.length ? (
+      {data?.length ? (
         <Card style={styles.card}>
           <Card.Content style={styles.cardContent}>
             {data.map((item) => (

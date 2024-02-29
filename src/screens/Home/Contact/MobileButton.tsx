@@ -18,7 +18,7 @@ export default React.memo((props: ContactInfoProps) => {
     openPhone(data?.mobile);
   };
 
-  return data && data.mobile ? (
+  return data?.mobile ? (
     <Button icon="cellphone" labelStyle={styles.buttonText} onPress={_onPress}>
       {data.mobile}
     </Button>

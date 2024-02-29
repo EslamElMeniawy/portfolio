@@ -5,9 +5,9 @@ import linkedin from "@src/assets/images/linkedin";
 import logo from "@src/assets/images/logo";
 
 export default {
-  android,
-  apple,
-  github,
-  linkedin,
-  logo,
+  Android: android,
+  Apple: apple,
+  Github: github,
+  Linkedin: linkedin,
+  Logo: logo,
 };

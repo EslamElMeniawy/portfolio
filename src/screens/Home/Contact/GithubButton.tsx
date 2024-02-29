@@ -19,10 +19,10 @@ export default React.memo((props: ContactInfoProps) => {
     openUrl(data?.github ? `https://github.com/${data?.github}` : undefined);
   };
 
-  return data && data.github ? (
+  return data?.github ? (
     <Button
       icon={({ color, size }) => (
-        <AppSvgImages.github fill={color} width={size} height={size} />
+        <AppSvgImages.Github fill={color} width={size} height={size} />
       )}
       labelStyle={styles.buttonText}
       onPress={_onPress}

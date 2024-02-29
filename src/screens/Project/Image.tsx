@@ -13,7 +13,7 @@ export default React.memo((props: ImageProps) => {
 
   const theme = useAppTheme();
 
-  return project && project.image ? (
+  return project?.image ? (
     <View
       style={StyleSheet.flatten([
         styles.imageContainer,

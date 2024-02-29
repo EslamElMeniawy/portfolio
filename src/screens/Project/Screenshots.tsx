@@ -12,7 +12,7 @@ export default React.memo((props: ProjectProps) => {
 
   const { t: translate } = useTranslation();
 
-  return project && project?.screens && project?.screens?.length ? (
+  return project?.screens?.length ? (
     <Card style={styles.card}>
       <Card.Content style={styles.cardContent}>
         <Text variant="titleLarge" style={styles.cardTitle}>

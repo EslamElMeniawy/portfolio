@@ -66,7 +66,7 @@ export default React.memo(() => {
         }
         onEndReached={() => fetchNextPage()}
         contentContainerStyle={
-          !projectsList || !projectsList.length ? styles.emptyList : undefined
+          !projectsList?.length ? styles.emptyList : undefined
         }
       />
       <ListLoadingMore isFetchingNextPage={isFetchingNextPage} />

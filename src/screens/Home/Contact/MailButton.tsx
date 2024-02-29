@@ -18,7 +18,7 @@ export default React.memo((props: ContactInfoProps) => {
     openEmail(data?.email);
   };
 
-  return data && data.email ? (
+  return data?.email ? (
     <Button icon="email" labelStyle={styles.buttonText} onPress={_onPress}>
       {data.email}
     </Button>
