@@ -1,4 +1,4 @@
-import { useLinkTo } from "@react-navigation/native";
+import { useLinkBuilder, useLinkTo } from "@react-navigation/native";
 import { ScreenTitle } from "@src/components";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
@@ -16,11 +16,17 @@ export default React.memo((props: ProjectProps) => {
   const { project } = props;
 
   const { t: translate } = useTranslation();
+  const { buildHref } = useLinkBuilder();
   const linkTo = useLinkTo();
 
   const _onBackPress = () => {
     console.info(getLogMessage("_onBackPress"), project);
-    linkTo({ screen: "Home", params: { screen: "Portfolio" } });
+
+    const href = buildHref("Home", { screen: "Portfolio" });
+
+    if (href) {
+      linkTo(href);
+    }
   };
 
   return (

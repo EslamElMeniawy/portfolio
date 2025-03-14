@@ -46,10 +46,10 @@ export default React.memo(() => {
         </Text>
         <Button
           onPress={() => restart()}
-          style={StyleSheet.compose(
+          style={StyleSheet.flatten([
             { backgroundColor: theme.colors.primary },
             styles.btn,
-          )}
+          ])}
           textColor={theme.colors.onPrimary}
           labelStyle={styles.btnTxt}
         >

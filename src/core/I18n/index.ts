@@ -10,10 +10,7 @@ import { I18nManager } from "react-native";
 
 const getLogMessage = (message: string) => `## I18n:: ${message}`;
 
-const resources = {
-  ar: { translation: ar },
-  en: { translation: en },
-};
+const resources = { ar: { translation: ar }, en: { translation: en } };
 
 const defaultLocale: string = AppLanguages.ENGLISH;
 
@@ -34,12 +31,10 @@ export const setI18nConfig = async () => {
 
   await i18n.init({
     debug: process.env.ENABLE_LOCAL_LOG === "true",
-    compatibilityJSON: "v3",
+    compatibilityJSON: "v4",
     resources,
     lng: defaultLocale,
-    interpolation: {
-      escapeValue: false,
-    },
+    interpolation: { escapeValue: false },
   });
 
   const locales = getLocales();
@@ -49,7 +44,7 @@ export const setI18nConfig = async () => {
   }
 
   // Get user language.
-  const userLanguage = await getLanguage();
+  const userLanguage = getLanguage();
 
   // Set the locale.
   await updateLanguage(userLanguage);

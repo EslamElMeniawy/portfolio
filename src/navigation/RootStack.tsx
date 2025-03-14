@@ -4,7 +4,7 @@ import { HomeBottomTabs } from "@src/navigation";
 import { Project, NotFound } from "@src/screens";
 import * as React from "react";
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList, "RootStack">();
 
 export default React.memo(() => (
   <Stack.Navigator
