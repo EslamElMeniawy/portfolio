@@ -1,4 +1,4 @@
-import { useLinkBuilder, useLinkTo } from "@react-navigation/native";
+import { useLinkTo } from "@react-navigation/native";
 import { NavigationParamsKeys } from "@src/navigation";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
@@ -18,19 +18,15 @@ export default React.memo((props: ProjectItemProps) => {
   const { item: project } = props;
 
   const { t: translate } = useTranslation();
-  const { buildHref } = useLinkBuilder();
   const linkTo = useLinkTo();
 
   const _onProjectPress = () => {
     console.info(getLogMessage("_onProjectPress"), project);
 
-    const href = buildHref("Project", {
-      [NavigationParamsKeys.PROJECT]: project.id,
+    linkTo({
+      screen: "Project",
+      params: { [NavigationParamsKeys.PROJECT]: project.id },
     });
-
-    if (href) {
-      linkTo(href);
-    }
   };
 
   return (

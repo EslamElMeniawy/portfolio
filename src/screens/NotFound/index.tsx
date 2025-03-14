@@ -1,4 +1,4 @@
-import { useLinkBuilder, useLinkTo } from "@react-navigation/native";
+import { useLinkTo } from "@react-navigation/native";
 import { Screen } from "@src/components";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
@@ -13,16 +13,11 @@ export default React.memo(() => {
   // #endregion
 
   const { t: translate } = useTranslation();
-  const { buildHref } = useLinkBuilder();
   const linkTo = useLinkTo();
 
   const _onHomePagePress = () => {
     console.info(getLogMessage("_onHomePagePress"));
-    const href = buildHref("Home");
-
-    if (href) {
-      linkTo(href);
-    }
+    linkTo({ screen: "Home" });
   };
 
   return (
