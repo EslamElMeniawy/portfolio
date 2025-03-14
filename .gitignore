@@ -39,3 +39,14 @@ yarn-error.*
 # firebase config files
 google-services.json
 GoogleService-Info.plist
+
+# Qodo Gen (Codium VS Code)
+.qodo
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
