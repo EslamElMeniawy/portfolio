@@ -1,18 +1,19 @@
 import { AppSvgImages } from "@src/constants";
-import { openUrl } from "@src/utils";
+import { openUrl, useAppTheme } from "@src/utils";
 import * as React from "react";
-import { Button } from "react-native-paper";
+import { ms } from "react-native-size-matters";
 
-import styles from "./styles";
-import { ContactInfoProps } from "./types";
+import Button from "./Button";
+import { Props } from "./types";
 
-export default React.memo((props: ContactInfoProps) => {
+export default React.memo((props: Props) => {
   // #region Logger
   const getLogMessage = (message: string) =>
     `## Home::Contact::LinkedinButton:: ${message}`;
   // #endregion
 
   const { data } = props;
+  const theme = useAppTheme();
 
   const _onPress = () => {
     console.info(getLogMessage("_onPress"));
@@ -24,13 +25,15 @@ export default React.memo((props: ContactInfoProps) => {
 
   return data?.linkedin ? (
     <Button
-      icon={({ color, size }) => (
-        <AppSvgImages.Linkedin fill={color} width={size} height={size} />
-      )}
-      labelStyle={styles.buttonText}
+      icon={
+        <AppSvgImages.Linkedin
+          fill={theme.colors.onSurface}
+          width={ms(12)}
+          height={ms(12)}
+        />
+      }
+      text={data.linkedin}
       onPress={_onPress}
-    >
-      {data.linkedin}
-    </Button>
+    />
   ) : null;
 });

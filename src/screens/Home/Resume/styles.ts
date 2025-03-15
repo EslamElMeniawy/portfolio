@@ -7,7 +7,10 @@ const styles = StyleSheet.create({
   },
   card: {
     marginVertical: vs(8),
-    padding: ms(8),
+    padding: ms(2),
+  },
+  cardContent: {
+    gap: vs(8),
   },
 });
 

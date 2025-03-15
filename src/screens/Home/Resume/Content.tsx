@@ -1,10 +1,16 @@
 import "@expo/match-media";
-import { ListEmptyComponent, ScrollContainer } from "@src/components";
+import {
+  ListEmptyComponent,
+  ScrollContainer,
+  ContactInfo,
+} from "@src/components";
 import { useGetAllResumePartsApi } from "@src/core";
 import { useFocusNotifyOnChangeProps } from "@src/utils";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
+import { StyleSheet, View } from "react-native";
 import { ActivityIndicator, Card } from "react-native-paper";
+import { s, vs } from "react-native-size-matters";
 import { useMediaQuery } from "react-responsive";
 
 import styles from "./styles";
@@ -43,11 +49,40 @@ export default React.memo(() => {
       refreshing={isFetching}
       onRefresh={() => refetch()}
     >
-      {data ? (
+      {aboutData?.length && contactData && resumeData ? (
         <Card style={styles.card}>
-          <>{/* Top Part */}</>
-          <>{/* Left Part */}</>
-          <>{/* Right Part */}</>
+          <Card.Content style={styles.cardContent}>
+            <View style={{ backgroundColor: "red", padding: 10 }}>
+              {/* Top Part */}
+            </View>
+            <View
+              style={{
+                flexDirection: isSmallScreen ? "column" : "row",
+                gap: isSmallScreen ? vs(8) : s(8),
+              }}
+            >
+              <View
+                style={StyleSheet.flatten([
+                  styles.cardContent,
+                  {
+                    flex: isSmallScreen ? undefined : 35,
+                    backgroundColor: "green",
+                  },
+                ])}
+              >
+                {/* Left Part */}
+                <ContactInfo data={contactData} />
+              </View>
+              <View
+                style={{
+                  flex: isSmallScreen ? undefined : 65,
+                  backgroundColor: "blue",
+                }}
+              >
+                {/* Right Part */}
+              </View>
+            </View>
+          </Card.Content>
         </Card>
       ) : (
         <ListEmptyComponent

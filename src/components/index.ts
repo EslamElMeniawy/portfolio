@@ -1,3 +1,4 @@
+export { default as ContactInfo } from "./ContactInfo";
 export { default as ErrorDialog } from "./ErrorDialog";
 export { default as ErrorFallbackView } from "./ErrorFallbackView";
 export { default as ListEmptyComponent } from "./ListEmptyComponent";

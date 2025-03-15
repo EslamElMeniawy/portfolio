@@ -1,11 +1,14 @@
-import { ListEmptyComponent, ScrollContainer } from "@src/components";
+import {
+  ListEmptyComponent,
+  ScrollContainer,
+  ContactInfo,
+} from "@src/components";
 import { useGetContactApi } from "@src/core";
 import { useFocusNotifyOnChangeProps } from "@src/utils";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { ActivityIndicator, Card } from "react-native-paper";
 
-import ContactInfo from "./ContactInfo";
 import styles from "./styles";
 
 export default React.memo(() => {
@@ -27,7 +30,9 @@ export default React.memo(() => {
     >
       {data ? (
         <Card style={styles.card}>
-          <ContactInfo data={data} />
+          <Card.Content style={styles.cardContent}>
+            <ContactInfo data={data} />
+          </Card.Content>
         </Card>
       ) : (
         <ListEmptyComponent
