@@ -2120,6 +2120,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo/match-media@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@expo/match-media@npm:0.4.0"
+  dependencies:
+    css-mediaquery: "npm:^0.1.2"
+  peerDependencies:
+    expo: "*"
+    expo-screen-orientation: "*"
+  checksum: 10/b95059487d0116936f673e15011304414ad9da78cedbb982d35c42f73615855469ed29ae71d358ca153957ddd02df9f0adaf3bab9f2dd84a94cf47873741e052
+  languageName: node
+  linkType: hard
+
 "@expo/metro-config@npm:0.19.12, @expo/metro-config@npm:~0.19.12":
   version: 0.19.12
   resolution: "@expo/metro-config@npm:0.19.12"
@@ -5559,6 +5571,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-mediaquery@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "css-mediaquery@npm:0.1.2"
+  checksum: 10/f2f7512daa015f98b82bd65bbdd7c2100b16dddf22784bde2a8085f10f11e8775da57108016fe767f5e400afe64581c15d4e649c47725af7eac5f4094fa7ae43
+  languageName: node
+  linkType: hard
+
 "css-select@npm:^5.1.0":
   version: 5.1.0
   resolution: "css-select@npm:5.1.0"
@@ -6903,6 +6922,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-screen-orientation@npm:~8.0.4":
+  version: 8.0.4
+  resolution: "expo-screen-orientation@npm:8.0.4"
+  peerDependencies:
+    expo: "*"
+    react-native: "*"
+  checksum: 10/952a54b31ee1641e297ca7315b1dbe76e88019c109252213ca57f36b9910fc84cbe0e1c5d820b0ccdb6253008613a40a3d4c4f11edd8b7747a141b4c8a288446
+  languageName: node
+  linkType: hard
+
 "expo-splash-screen@npm:~0.29.22":
   version: 0.29.22
   resolution: "expo-splash-screen@npm:0.29.22"
@@ -8036,6 +8065,13 @@ __metadata:
   version: 2.1.0
   resolution: "human-signals@npm:2.1.0"
   checksum: 10/df59be9e0af479036798a881d1f136c4a29e0b518d4abb863afbd11bf30efa3eeb1d0425fc65942dcc05ab3bf40205ea436b0ff389f2cd20b75b8643d539bf86
+  languageName: node
+  linkType: hard
+
+"hyphenate-style-name@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "hyphenate-style-name@npm:1.1.0"
+  checksum: 10/b9ed74e29181d96bd58a2d0e62fc4a19879db591dba268275829ff0ae595fcdf11faafaeaa63330a45c3004664d7db1f0fc7cdb372af8ee4615ed8260302c207
   languageName: node
   linkType: hard
 
@@ -9557,6 +9593,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"matchmediaquery@npm:^0.4.2":
+  version: 0.4.2
+  resolution: "matchmediaquery@npm:0.4.2"
+  dependencies:
+    css-mediaquery: "npm:^0.1.2"
+  checksum: 10/eccdef80f89fa550dccf4ba236d32ca125fde470e043927deb89b06c28572d83a81eccad4e443ebb9360553fa24ea9a87f64a706ab1a6f0511bd0232181df5cf
+  languageName: node
+  linkType: hard
+
 "math-intrinsics@npm:^1.1.0":
   version: 1.1.0
   resolution: "math-intrinsics@npm:1.1.0"
@@ -10932,6 +10977,7 @@ __metadata:
     "@commitlint/cli": "npm:^19.8.0"
     "@commitlint/config-conventional": "npm:^19.8.0"
     "@evilmartians/lefthook": "npm:^1.11.3"
+    "@expo/match-media": "npm:^0.4.0"
     "@expo/metro-runtime": "npm:~4.0.1"
     "@react-native-community/netinfo": "npm:11.4.1"
     "@react-native-firebase/analytics": "npm:^21.12.0"
@@ -10957,6 +11003,7 @@ __metadata:
     expo-image: "npm:~2.0.6"
     expo-linking: "npm:~7.0.5"
     expo-localization: "npm:~16.0.1"
+    expo-screen-orientation: "npm:~8.0.4"
     expo-splash-screen: "npm:~0.29.22"
     expo-status-bar: "npm:~2.0.1"
     expo-system-ui: "npm:~4.0.8"
@@ -10980,6 +11027,7 @@ __metadata:
     react-native-toast-notifications: "npm:^3.4.0"
     react-native-web: "npm:~0.19.13"
     react-redux: "npm:^9.2.0"
+    react-responsive: "npm:^10.0.1"
     redux-logger: "npm:^3.0.6"
     serve: "npm:^14.2.4"
     tinycolor2: "npm:^1.6.0"
@@ -11114,7 +11162,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -11530,6 +11578,20 @@ __metadata:
   version: 0.14.2
   resolution: "react-refresh@npm:0.14.2"
   checksum: 10/512abf97271ab8623486061be04b608c39d932e3709f9af1720b41573415fa4993d0009fa5138b6705b60a98f4102f744d4e26c952b14f41a0e455521c6be4cc
+  languageName: node
+  linkType: hard
+
+"react-responsive@npm:^10.0.1":
+  version: 10.0.1
+  resolution: "react-responsive@npm:10.0.1"
+  dependencies:
+    hyphenate-style-name: "npm:^1.0.0"
+    matchmediaquery: "npm:^0.4.2"
+    prop-types: "npm:^15.6.1"
+    shallow-equal: "npm:^3.1.0"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 10/4f3659be972be889445f396ceb680b26ba01886c906ae6efce2985c9a9cd58ef1de6907d37658ed74f41cbc9071823a3cdcb41887da84ebfeb563e329b453ea5
   languageName: node
   linkType: hard
 
@@ -12343,6 +12405,13 @@ __metadata:
   dependencies:
     kind-of: "npm:^6.0.2"
   checksum: 10/e066bd540cfec5e1b0f78134853e0d892d1c8945fb9a926a579946052e7cb0c70ca4fc34f875a8083aa7910d751805d36ae64af250a6de6f3d28f9fa7be6c21b
+  languageName: node
+  linkType: hard
+
+"shallow-equal@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "shallow-equal@npm:3.1.0"
+  checksum: 10/2e0eda6ff74da859a3766fd1865522aacfbef945652d2b629fda0ca5cd9f1f6579e6b3da8bd21e6e8be3a8b49c24484cdd2b8a128f5793d48cff73a0edec15f9
   languageName: node
   linkType: hard
 
