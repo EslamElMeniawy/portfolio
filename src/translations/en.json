@@ -32,5 +32,11 @@
   "description": "Description",
   "screenshots": "Screenshots",
   "developed_using": "Developed Using",
-  "download_links": "Download Links"
+  "download_links": "Download Links",
+  "summary": "Summary",
+  "contact": "Contact",
+  "work_experience": "Work Experience",
+  "education": "Education",
+  "skills_and_programming_languages": "Skills and Programming Languages",
+  "languages": "Languages"
 }

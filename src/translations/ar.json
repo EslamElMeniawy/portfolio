@@ -32,5 +32,11 @@
   "description": "الوصف",
   "screenshots": "لقطات الشاشة",
   "developed_using": "تم تطويره باستخدام",
-  "download_links": "روابط التحميل"
+  "download_links": "روابط التحميل",
+  "summary": "الملخص",
+  "contact": "التواصل",
+  "work_experience": "الخبرة العملية",
+  "education": "التعليم",
+  "skills_and_programming_languages": "المهارات ولغات البرمجة",
+  "languages": "اللغات"
 }

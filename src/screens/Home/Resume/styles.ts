@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     padding: ms(2),
   },
   cardContent: {
-    gap: vs(8),
+    gap: vs(16),
   },
   topContainer: {
     gap: vs(2),
@@ -26,10 +26,21 @@ const styles = StyleSheet.create({
   },
   leftContainer: {
     gap: vs(8),
-    backgroundColor: "green",
+  },
+  titleMargin: {
+    marginTop: vs(16),
   },
   rightContainer: {
-    backgroundColor: "blue",
+    gap: vs(8),
+  },
+  mediumTitle: {
+    fontSize: ms(12),
+    lineHeight: ms(16),
+  },
+  smallTitle: {
+    textTransform: "uppercase",
+    fontSize: ms(11),
+    lineHeight: ms(16),
   },
 });
 
