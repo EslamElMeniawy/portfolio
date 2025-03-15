@@ -2,6 +2,7 @@ import "@expo/match-media";
 import {
   ListEmptyComponent,
   ScrollContainer,
+  AboutInfo,
   ContactInfo,
 } from "@src/components";
 import { useGetAllResumePartsApi } from "@src/core";
@@ -71,6 +72,7 @@ export default React.memo(() => {
                 ])}
               >
                 {/* Left Part */}
+                <AboutInfo data={aboutData} />
                 <ContactInfo data={contactData} />
               </View>
               <View

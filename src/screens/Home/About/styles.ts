@@ -12,11 +12,6 @@ const styles = StyleSheet.create({
   cardContent: {
     gap: vs(16),
   },
-  text: {
-    fontSize: ms(12),
-    lineHeight: ms(16),
-    textAlign: "justify",
-  },
 });
 
 export default styles;
