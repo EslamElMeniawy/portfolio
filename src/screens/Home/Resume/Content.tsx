@@ -1,19 +1,17 @@
 import "@expo/match-media";
-import {
-  ListEmptyComponent,
-  ScrollContainer,
-  AboutInfo,
-  ContactInfo,
-} from "@src/components";
+import { ListEmptyComponent, ScrollContainer } from "@src/components";
 import { useGetAllResumePartsApi } from "@src/core";
 import { useFocusNotifyOnChangeProps } from "@src/utils";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import { ActivityIndicator, Card } from "react-native-paper";
 import { s, vs } from "react-native-size-matters";
 import { useMediaQuery } from "react-responsive";
 
+import LeftSection from "./LeftSection";
+import RightSection from "./RightSection";
+import TopSection from "./TopSection";
 import styles from "./styles";
 
 export default React.memo(() => {
@@ -53,36 +51,22 @@ export default React.memo(() => {
       {aboutData?.length && contactData && resumeData ? (
         <Card style={styles.card}>
           <Card.Content style={styles.cardContent}>
-            <View style={{ backgroundColor: "red", padding: 10 }}>
-              {/* Top Part */}
-            </View>
+            <TopSection data={resumeData} />
             <View
               style={{
                 flexDirection: isSmallScreen ? "column" : "row",
                 gap: isSmallScreen ? vs(8) : s(8),
               }}
             >
-              <View
-                style={StyleSheet.flatten([
-                  styles.cardContent,
-                  {
-                    flex: isSmallScreen ? undefined : 35,
-                    backgroundColor: "green",
-                  },
-                ])}
-              >
-                {/* Left Part */}
-                <AboutInfo data={aboutData} />
-                <ContactInfo data={contactData} />
-              </View>
-              <View
-                style={{
-                  flex: isSmallScreen ? undefined : 65,
-                  backgroundColor: "blue",
-                }}
-              >
-                {/* Right Part */}
-              </View>
+              <LeftSection
+                flex={isSmallScreen ? undefined : 35}
+                aboutData={aboutData}
+                contactData={contactData}
+              />
+              <RightSection
+                flex={isSmallScreen ? undefined : 65}
+                data={resumeData}
+              />
             </View>
           </Card.Content>
         </Card>

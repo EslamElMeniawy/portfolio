@@ -12,6 +12,13 @@ const styles = StyleSheet.create({
   cardContent: {
     gap: vs(8),
   },
+  leftContainer: {
+    gap: vs(8),
+    backgroundColor: "green",
+  },
+  rightContainer: {
+    backgroundColor: "blue",
+  },
 });
 
 export default styles;
