@@ -13,13 +13,20 @@ export default React.memo((props: LeftSectionProps) => {
 
   return (
     <View style={StyleSheet.flatten([styles.leftContainer, { flex }])}>
-      <Text variant="titleMedium" style={styles.subTitle}>
+      <Text
+        variant="titleMedium"
+        style={styles.subTitle}
+        adjustsFontSizeToFit
+        numberOfLines={1}
+      >
         {translate("summary")}
       </Text>
       <AboutInfo data={aboutData} />
       <Text
         variant="titleMedium"
         style={StyleSheet.flatten([styles.subTitle, styles.titleMargin])}
+        adjustsFontSizeToFit
+        numberOfLines={1}
       >
         {translate("contact")}
       </Text>

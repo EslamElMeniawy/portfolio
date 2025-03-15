@@ -15,6 +15,8 @@ export default React.memo((props: LanguageProps) => {
       <Text
         variant="titleMedium"
         style={StyleSheet.flatten([styles.subTitle, styles.titleMargin])}
+        adjustsFontSizeToFit
+        numberOfLines={1}
       >
         {translate("languages")}
       </Text>

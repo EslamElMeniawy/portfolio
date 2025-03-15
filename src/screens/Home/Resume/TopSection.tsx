@@ -10,10 +10,20 @@ export default React.memo((props: TopSectionProps) => {
 
   return (
     <View style={styles.topContainer}>
-      <Text variant="headlineMedium" style={styles.title}>
+      <Text
+        variant="headlineMedium"
+        style={styles.title}
+        adjustsFontSizeToFit
+        numberOfLines={1}
+      >
         {data?.name}
       </Text>
-      <Text variant="titleMedium" style={styles.subTitle}>
+      <Text
+        variant="titleMedium"
+        style={styles.subTitle}
+        adjustsFontSizeToFit
+        numberOfLines={1}
+      >
         {data?.profession}
       </Text>
     </View>
