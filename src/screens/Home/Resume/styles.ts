@@ -12,6 +12,18 @@ const styles = StyleSheet.create({
   cardContent: {
     gap: vs(8),
   },
+  topContainer: {
+    gap: vs(2),
+  },
+  title: {
+    fontSize: ms(24),
+    lineHeight: ms(32),
+  },
+  subTitle: {
+    textTransform: "uppercase",
+    fontSize: ms(14),
+    lineHeight: ms(20),
+  },
   leftContainer: {
     gap: vs(8),
     backgroundColor: "green",
