@@ -36,3 +36,8 @@ export interface SkillsProps {
 export interface LanguageProps {
   data?: Language[];
 }
+
+export interface PlaceDateRowProps {
+  place?: string;
+  date?: string;
+}

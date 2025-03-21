@@ -42,6 +42,14 @@ const styles = StyleSheet.create({
     fontSize: ms(11),
     lineHeight: ms(16),
   },
+  placeDateRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  dateText: {
+    fontSize: ms(12),
+    lineHeight: ms(16),
+  },
 });
 
 export default styles;
