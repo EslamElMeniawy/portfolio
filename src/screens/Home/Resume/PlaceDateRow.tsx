@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import { Text } from "react-native-paper";
 
 import styles from "./styles";
@@ -12,7 +12,7 @@ export default React.memo((props: PlaceDateRowProps) => {
     <View style={styles.placeDateRow}>
       <Text
         variant="titleMedium"
-        style={StyleSheet.flatten([styles.subTitle, styles.smallTitle])}
+        style={styles.smallTitle}
         adjustsFontSizeToFit
         numberOfLines={1}
       >
