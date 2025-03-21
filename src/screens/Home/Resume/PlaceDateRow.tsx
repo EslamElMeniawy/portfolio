@@ -18,7 +18,7 @@ export default React.memo((props: PlaceDateRowProps) => {
       >
         {place}
       </Text>
-      <Text style={styles.dateText} adjustsFontSizeToFit numberOfLines={1}>
+      <Text style={styles.text} adjustsFontSizeToFit numberOfLines={1}>
         {date}
       </Text>
     </View>

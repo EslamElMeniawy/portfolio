@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  dateText: {
+  text: {
     fontSize: ms(12),
     lineHeight: ms(16),
   },
