@@ -21,12 +21,25 @@ export interface RightSectionProps {
   data?: Resume;
 }
 
+export interface PlaceDateRowProps {
+  place?: string;
+  date?: string;
+}
+
 export interface WorkExperienceProps {
   data?: WorkExperience[];
 }
 
+export interface WorkExperienceItemProps {
+  data?: WorkExperience;
+}
+
 export interface EducationProps {
   data?: Education[];
+}
+
+export interface EducationItemProps {
+  data?: Education;
 }
 
 export interface SkillsProps {
@@ -35,9 +48,4 @@ export interface SkillsProps {
 
 export interface LanguageProps {
   data?: Language[];
-}
-
-export interface PlaceDateRowProps {
-  place?: string;
-  date?: string;
 }

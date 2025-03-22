@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { ms, vs } from "react-native-size-matters";
+import { ms, vs, s } from "react-native-size-matters";
 
 const styles = StyleSheet.create({
   loadingIndicator: {
@@ -32,6 +32,15 @@ const styles = StyleSheet.create({
   },
   rightContainer: {
     gap: vs(8),
+  },
+  sectionRow: {
+    flexDirection: "row",
+    gap: s(8),
+  },
+  circle: {
+    width: ms(8),
+    height: ms(8),
+    borderRadius: ms(4),
   },
   mediumTitle: {
     fontSize: ms(12),
