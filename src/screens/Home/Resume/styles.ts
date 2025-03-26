@@ -35,12 +35,20 @@ const styles = StyleSheet.create({
   },
   sectionRow: {
     flexDirection: "row",
-    gap: s(8),
+    gap: s(4),
+  },
+  circleContainer: {
+    height: ms(16),
+    justifyContent: "center",
   },
   circle: {
     width: ms(8),
     height: ms(8),
     borderRadius: ms(4),
+  },
+  sectionDataContainer: {
+    flex: 1,
+    gap: vs(4),
   },
   mediumTitle: {
     fontSize: ms(12),

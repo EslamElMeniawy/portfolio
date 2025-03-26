@@ -55,11 +55,11 @@ export default React.memo(() => {
             <View
               style={{
                 flexDirection: isSmallScreen ? "column" : "row",
-                gap: isSmallScreen ? vs(8) : s(8),
+                gap: isSmallScreen ? vs(32) : s(32),
               }}
             >
               <LeftSection
-                flex={isSmallScreen ? undefined : 35}
+                flex={isSmallScreen ? undefined : 30}
                 aboutData={aboutData}
                 contactData={contactData}
               />

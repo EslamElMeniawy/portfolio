@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { StyleSheet } from "react-native";
 import { Text } from "react-native-paper";
 
+import EducationItem from "./EducationItem";
 import styles from "./styles";
 import { EducationProps } from "./types";
 
@@ -20,7 +21,12 @@ export default React.memo((props: EducationProps) => {
       >
         {translate("education")}
       </Text>
-      <></>
+      {data?.map((item) => (
+        <EducationItem
+          key={`${item.degree}-${item.place}-${item.date}`}
+          data={item}
+        />
+      ))}
     </>
   );
 });

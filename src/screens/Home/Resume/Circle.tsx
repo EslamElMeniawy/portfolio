@@ -8,11 +8,13 @@ export default React.memo(() => {
   const theme = useAppTheme();
 
   return (
-    <View
-      style={StyleSheet.flatten([
-        styles.circle,
-        { backgroundColor: theme.colors.onSurface },
-      ])}
-    />
+    <View style={styles.circleContainer}>
+      <View
+        style={StyleSheet.flatten([
+          styles.circle,
+          { backgroundColor: theme.colors.onSurface },
+        ])}
+      />
+    </View>
   );
 });
