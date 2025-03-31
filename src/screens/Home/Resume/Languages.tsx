@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
-import { StyleSheet } from "react-native";
-import { Text } from "react-native-paper";
+import { StyleSheet, View } from "react-native";
+import { Text, Chip } from "react-native-paper";
 
 import styles from "./styles";
 import { LanguageProps } from "./types";
@@ -20,7 +20,13 @@ export default React.memo((props: LanguageProps) => {
       >
         {translate("languages")}
       </Text>
-      <></>
+      <View style={styles.skillLanguageContainer}>
+        {data?.map((language) => (
+          <Chip
+            key={language.name}
+          >{`${language.name} (${language.experience})`}</Chip>
+        ))}
+      </View>
     </>
   );
 });

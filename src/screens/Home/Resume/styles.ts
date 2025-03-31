@@ -67,6 +67,12 @@ const styles = StyleSheet.create({
     fontSize: ms(12),
     lineHeight: ms(16),
   },
+  skillLanguageContainer: {
+    flexWrap: "wrap",
+    flexDirection: "row",
+    rowGap: vs(4),
+    columnGap: s(4),
+  },
 });
 
 export default styles;
